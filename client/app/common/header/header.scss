@@ -1,0 +1,44 @@
+@import '../common';
+
+#sujan header {
+  md-toolbar {
+    background: white;
+    height: 100px;
+
+    .md-toolbar-tools {
+      margin-top: -13px;
+      .logo-link {
+        margin-top: 55px;
+        .desktop-logo {
+          width: 87px;
+        }
+      }
+      .brand-name {
+        color: #ff5252;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 54px;
+        font-weight: bold;
+        margin: 46px 0 0 9px;
+        text-shadow: 7px 1px 1px #ccc;
+      }
+      .brand-solgan {
+        color: #000;
+        position: relative;
+        top: 56px;
+        font-size: 12px;
+        right: 332px;
+      }
+      .smed {
+        background: white;
+        li {
+          list-style: none;
+          display: inline;
+          i {
+            color: red;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
