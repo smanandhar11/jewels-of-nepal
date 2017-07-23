@@ -1,0 +1,25 @@
+.rapper {
+  margin: auto;
+  &.lg {
+    max-width: 992px;
+  }
+  &.md {
+    max-width: 650px;
+  }
+  & .xs {
+    max-width: 475px;
+  }
+  @media (max-width: 992px) {
+    width: 768px;
+  }
+  @media (max-width: 768px) {
+    width: 650px;
+  }
+  @media (max-width: 650px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+  @media (max-width: 475px) {
+    width: 100%;
+  }
+}

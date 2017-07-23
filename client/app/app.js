@@ -7,20 +7,23 @@ import ngMaterial from 'angular-material';
 import ngAnimate from 'angular-animate';
 import 'normalize.css';
 import 'angular-material/angular-material.css';
+import appTheme from './styles/theme.config';
 
 angular.module('app', [
   uiRouter,
   Common,
   Components,
   ngMaterial,
-  ngAnimate
-
+  ngAnimate,
 ])
-  .config(($locationProvider) => {
+  .config(($locationProvider,$mdThemingProvider ) => {
     "ngInject";
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
+
+    //appTheme
+    appTheme($mdThemingProvider);
   })
 
   .component('app', AppComponent);

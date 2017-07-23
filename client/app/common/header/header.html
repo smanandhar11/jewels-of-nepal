@@ -1,40 +1,50 @@
-<!--<md-content>-->
-<!--<md-nav-bar-->
-<!--md-selected-nav-item="currentNavItem"-->
-<!--nav-bar-aria-label="navigation links">-->
-<!--<md-nav-item ui-sref="home" md-nav-click="goto('page1')" name="page1">-->
-<!--Home-->
-<!--</md-nav-item>-->
-<!--<md-nav-item ui-sref="gallery" md-nav-click="goto('page2')" name="page2">-->
-<!--Gallery-->
-<!--</md-nav-item>-->
-<!--<md-nav-item ui-sref="about" md-nav-click="goto('page3')" name="page3">-->
-<!--About-->
-<!--</md-nav-item>-->
-<!--</md-nav-bar>-->
-<!--</md-content>-->
+<!--header-->
 <header>
   <md-toolbar>
     <div class="md-toolbar-tools">
+      <div class="header-left">
         <!--logo-->
-        <a class="logo-link"
-           ui-sref="home">
+        <a class="logo-link" ui-sref="home">
           <img class="desktop-logo" src="../../../app/assets/images/brand-logo.png" alt="brand name">
         </a>
         <!--brand name-->
         <a class="brand-name">Jewels of Nepal</a>
         <p class="brand-solgan">Long live the Revolution</p>
-
-        <div class="smed">
+      </div>
+      <!--social media -->
+      <div class="header-right">
+        <a target="_blank" href="https://www.facebook.com/jewelsofnepal/">
           <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+        </a>
+        <a href="#">
           <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        </a>
+        <a href="#">
           <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+        </a>
+        <a href="#">
           <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-        </div>
-
+        </a>
+      </div>
     </div>
-
   </md-toolbar>
-
-
 </header>
+
+<!--navigation-->
+<nav>
+  <md-toolbar>
+    <md-tabs class="btn-primary" md-stretch-tabs="always">
+      <md-tab ui-sref="home">
+        Home
+      </md-tab>
+      <md-tab ui-sref="gallery">
+        Gallery
+      </md-tab>
+      <md-tab ui-sref="about">
+        About
+      </md-tab>
+    </md-tabs>
+  </md-toolbar>
+</nav>
+
+
