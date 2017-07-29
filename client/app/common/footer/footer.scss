@@ -1,0 +1,19 @@
+#sujan {
+
+  .footer {
+    background: #106cc8;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      .footer-link {
+        font-size: 15px;
+        color: #f5f5f5;
+        text-decoration: none;
+      }
+    }
+  }
+}
