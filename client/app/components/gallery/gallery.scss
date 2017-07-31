@@ -1,0 +1,16 @@
+#sujan {
+  .main-gallery-container {
+    display: flex;
+
+    .filter-container {
+      height:200px;
+      flex: 2;
+    }
+    .gallery-section {
+      height: 200px;
+      flex: 4;
+      background: #ccc;
+
+    }
+  }
+}
