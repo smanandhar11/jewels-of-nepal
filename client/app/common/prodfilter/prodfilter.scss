@@ -1,3 +1,6 @@
-.prodfilter {
-  color: red;
+#sujan {
+  .prodfilter {
+    display: flex;
+    flex-direction: column;
+  }
 }

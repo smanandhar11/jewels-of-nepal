@@ -1,4 +1,27 @@
+// md-ink
 md-tabs md-ink-bar {
   color: #ff5252;
   background: #ff5252;
+}
+
+//md-select
+md-select-value {
+  //max-width: 200px;
+  span {
+    font-size: 15px;
+  }
+}
+
+md-select-menu {
+  md-option {
+    height: 40px;
+    .md-text {
+      font-size: 12px;
+    }
+  }
+}
+
+md-input-container:not(.md-input-invalid).md-input-has-value label {
+  color: $primaryColor;
+  font-size: 14px;
 }

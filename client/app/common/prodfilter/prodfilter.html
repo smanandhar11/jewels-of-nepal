@@ -1,10 +1,34 @@
-<div>
+<div class="prodfilter">
+  <!--Colors-->
   <md-input-container>
     <label>Color</label>
     <md-select ng-model="color">
-      <md-option value="Red">Red</md-option>
-      <md-option value="Green">Green</md-option>
-      <md-option value="Simrik">Pink</md-option>
+      <md-option ng-repeat="color in $ctrl.colors"
+                 value="{{color}}">
+        {{color}}
+      </md-option>
+    </md-select>
+  </md-input-container>
+
+  <!--Types-->
+  <md-input-container>
+    <label>Type</label>
+    <md-select ng-model="type">
+      <md-option ng-repeat="type in $ctrl.types"
+                 value="{{type}}">
+        {{type}}
+      </md-option>
+    </md-select>
+  </md-input-container>
+
+  <!--Price Range-->
+  <md-input-container>
+    <label>Price Range</label>
+    <md-select ng-model="priceRange">
+      <md-option ng-repeat="price in $ctrl.prices"
+                 value="{{price}}">
+        {{price}}
+      </md-option>
     </md-select>
   </md-input-container>
 </div>
