@@ -1,0 +1,13 @@
+<div class="prod-display">
+  <div class="circle" ng-repeat="product in $ctrl.products">
+    <div class="prod-image"
+         style="background: url({{product.imgSrc}});
+                width: 100%;
+                height: 100%;
+                background-position: {{product.bgPosition}};
+                background-size: cover;
+                border-radius: 80px;">
+    </div>
+    <div class="prod-name">{{product.name}}</div>
+  </div>
+</div>

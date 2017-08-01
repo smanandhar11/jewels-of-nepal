@@ -5,6 +5,7 @@ import User from './user/user';
 import Wrapper from './wrapper/wrapper';
 import Footer from './footer/footer';
 import ProdFilter from './prodfilter/prodfilter';
+import ProdDisplay from './proddisplay/proddisplay';
 
 let commonModule = angular.module('app.common', [
   Header,
@@ -12,7 +13,8 @@ let commonModule = angular.module('app.common', [
   User,
   Wrapper,
   Footer,
-  ProdFilter
+  ProdFilter,
+  ProdDisplay
 ])
 
 .name;
