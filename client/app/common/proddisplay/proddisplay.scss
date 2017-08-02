@@ -4,35 +4,33 @@
   .prod-display {
     padding: 20px 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
     .circle {
-      height: 150px;
-      width: 150px;
-      border-radius: 80px;
-      border: 3px solid $primaryColor;
-      box-shadow: 3px 3px 8px #8e8e8e;
+      height: 180px;
+      width: 180px;
+      border-radius: 100px;
+      border: 3px solid #108bc8;
       cursor: pointer;
+      margin: 0 0 35px 100px;
+      outline: none;
 
       &:hover {
         transform: scale(1.1);
-        transition: .5s;
+        transition: 1.2s;
+        box-shadow: 3px 3px 8px #8e8e8e;
       }
 
-      .prod-image {
-        background: url("../../../app/assets/images/product-images/saphire-fall.jpg") no-repeat;
-        width: 100%;
-        height: 100%;
-        background-position: bottom;
-        background-size: cover;
-        border-radius: 80px;
-      }
       .prod-name {
         position: relative;
-        left: 34px;
         top: 10px;
         font-size: 12px;
         font-weight: bold;
       }
+    }
+    .circled-animation {
+      border: 7px solid #108bc8;
     }
   }
 }
