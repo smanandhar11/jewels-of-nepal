@@ -3,7 +3,11 @@ import controller from './prodfilter.controller';
 import './prodfilter.scss';
 
 let prodfilterComponent = {
-  bindings: {},
+  bindings: {
+    colorSelected: '=',
+    typeSelected: '=',
+    priceSelected: '='
+  },
   template,
   controller
 };

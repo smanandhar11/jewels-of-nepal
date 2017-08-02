@@ -16,7 +16,8 @@
     <label>Type</label>
     <md-select ng-model="type">
       <md-option ng-repeat="type in $ctrl.types"
-                 value="{{type}}">
+                 value="{{type}}"
+                 ng-click="$ctrl.typeSelect(type)">
         {{type}}
       </md-option>
     </md-select>
@@ -27,7 +28,8 @@
     <label>Price Range</label>
     <md-select ng-model="priceRange">
       <md-option ng-repeat="price in $ctrl.prices"
-                 value="{{price}}">
+                 value="{{price}}"
+                 ng-click="$ctrl.priceSelect(price)">
         {{price}}
       </md-option>
     </md-select>

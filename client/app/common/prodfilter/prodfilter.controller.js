@@ -29,7 +29,13 @@ class ProdfilterController {
 
   // storing colorSelected in a var
   colorSelect(value) {
-    this.colorSeleted = value;
+    this.colorSelected = value;
+  }
+  typeSelect(type) {
+    this.typeSelected = type;
+  }
+  priceSelect(price) {
+    this.priceSelected = price;
   }
 }
 
