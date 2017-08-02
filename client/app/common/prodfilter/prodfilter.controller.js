@@ -26,6 +26,11 @@ class ProdfilterController {
       'Rs.1000 and more'
     ]
   }
+
+  // storing colorSelected in a var
+  colorSelect(value) {
+    this.colorSeleted = value;
+  }
 }
 
 export default ProdfilterController;

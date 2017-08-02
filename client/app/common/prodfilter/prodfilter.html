@@ -4,7 +4,8 @@
     <label>Color</label>
     <md-select ng-model="color">
       <md-option ng-repeat="color in $ctrl.colors"
-                 value="{{color}}">
+                 value="{{color}}"
+                 ng-click="$ctrl.colorSelect(color)">
         {{color}}
       </md-option>
     </md-select>
