@@ -14,9 +14,9 @@ class ProddisplayController {
 
       {
         'name':'Purple Haze',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Blue',
-        'priceRange':'100-500',
+        'priceRange':'500-1000',
         'price':'Rs.250',
         'bgPosition':'center',
         'nameSpace':'58px',

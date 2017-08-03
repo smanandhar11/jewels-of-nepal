@@ -20,10 +20,10 @@ class ProdfilterController {
     ];
 
     this.prices = [
-      'Rs.0 - Rs.100',
-      'Rs.100 - Rs.500',
-      'Rs.500 - Rs.1000',
-      'Rs.1000 and more'
+      '0-100',
+      '100-500',
+      '500-1000',
+      '1000 and more'
     ]
   }
 
