@@ -2,36 +2,42 @@
   <!--Colors-->
   <md-input-container>
     <label>Color</label>
-    <md-select ng-model="color">
+    <md-select ng-model="$ctrl.colorModel">
       <md-option ng-repeat="color in $ctrl.colors"
                  value="{{color}}"
                  ng-click="$ctrl.colorSelect(color)">
         {{color}}
       </md-option>
     </md-select>
+    <a ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()">Reset Color</a>
   </md-input-container>
 
   <!--Types-->
   <md-input-container>
     <label>Type</label>
-    <md-select ng-model="type">
+    <md-select ng-model="$ctrl.typeModel">
       <md-option ng-repeat="type in $ctrl.types"
                  value="{{type}}"
                  ng-click="$ctrl.typeSelect(type)">
         {{type}}
       </md-option>
     </md-select>
+    <a ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()">Reset Type</a>
   </md-input-container>
 
   <!--Price Range-->
   <md-input-container>
     <label>Price Range</label>
-    <md-select ng-model="priceRange">
+    <md-select ng-model="$ctrl.priceModel">
       <md-option ng-repeat="price in $ctrl.prices"
                  value="{{price}}"
                  ng-click="$ctrl.priceSelect(price)">
         {{price}}
       </md-option>
     </md-select>
+    <a ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()">Reset Price</a>
   </md-input-container>
+
+  <!--reset filter-->
+  <md-button ng-if="$ctrl.colorModel || $ctrl.typeModel || $ctrl.priceModel" ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reload</md-button>
 </div>
