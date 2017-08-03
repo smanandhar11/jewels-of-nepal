@@ -27,6 +27,7 @@ class ProddisplayController {
         'name':'Strawberry Cough',
         'type':'Bracelet',
         'colorCategory':'Blue',
+        'secondaryColor':'Yellow',
         'priceRange':'100-500',
         'price':'Rs.250',
         'bgPosition':'center',
@@ -35,7 +36,7 @@ class ProddisplayController {
       },
       {
         'name':'Mars Burning',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Red',
         'priceRange':'100-500',
         'price':'Rs.250',
@@ -45,7 +46,7 @@ class ProddisplayController {
       },
       {
         'name':'Simpearl',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Others',
         'priceRange':'100-500',
         'price':'Rs.250',
@@ -56,7 +57,7 @@ class ProddisplayController {
 
       {
         'name':'Deep Blue Fall',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Others',
         'priceRange':'100-500',
         'price':'Rs.250',
@@ -66,7 +67,7 @@ class ProddisplayController {
       },
       {
         'name':'Black Diamond',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Others',
         'priceRange':'100-500',
         'price':'Rs.250',
@@ -76,7 +77,7 @@ class ProddisplayController {
       },
       {
         'name':'Elegant Pearl',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Others',
         'priceRange':'100-500',
         'price':'Rs.250',
@@ -86,7 +87,7 @@ class ProddisplayController {
       },
       {
         'name':'Green Eyed Bird',
-        'type':'Earring',
+        'type':'Earrings',
         'colorCategory':'Others',
         'priceRange':'100-500',
         'price':'Rs.250',
