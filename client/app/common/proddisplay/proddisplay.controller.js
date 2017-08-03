@@ -125,12 +125,8 @@ class ProddisplayController {
         'imgSrc':'../../../app/assets/images/product-images/gothic-black.jpg'
       }
     ];
-    this.circled = false;
   }
-  // prodSelect() {
-  //   this.circled = true;
-  //   console.log('>>>',this.circled);
-  // }
+
 }
 
 export default ProddisplayController;

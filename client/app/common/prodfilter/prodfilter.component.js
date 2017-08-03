@@ -4,7 +4,7 @@ import './prodfilter.scss';
 
 let prodfilterComponent = {
   bindings: {
-    colorSelected: '=',
+    colorSelected:'=',
     typeSelected: '=',
     priceSelected: '='
   },

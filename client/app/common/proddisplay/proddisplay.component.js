@@ -4,6 +4,9 @@ import './proddisplay.scss';
 
 let proddisplayComponent = {
   bindings: {},
+  require: {
+    galleryComp:'^gallery'
+  },
   template,
   controller
 };
