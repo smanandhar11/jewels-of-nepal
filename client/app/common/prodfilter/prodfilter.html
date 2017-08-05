@@ -9,7 +9,7 @@
         {{color}}
       </md-option>
     </md-select>
-    <a ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()">Reset Color</a>
+    <a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>
   </md-input-container>
 
   <!--Types-->
@@ -22,7 +22,7 @@
         {{type}}
       </md-option>
     </md-select>
-    <a ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()">Reset Type</a>
+    <a class="reset-value" ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"><i class="fa fa-times"></i></a>
   </md-input-container>
 
   <!--Price Range-->
@@ -35,9 +35,9 @@
         {{price}}
       </md-option>
     </md-select>
-    <a ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()">Reset Price</a>
+    <a class="reset-value" ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"><i class="fa fa-times"></i></a>
   </md-input-container>
 
   <!--reset filter-->
-  <md-button ng-if="$ctrl.colorModel || $ctrl.typeModel || $ctrl.priceModel" ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reset All</md-button>
+  <md-button class="md-raised accent-btn" ng-if="$ctrl.colorModel || $ctrl.typeModel || $ctrl.priceModel" ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reset All</md-button>
 </div>

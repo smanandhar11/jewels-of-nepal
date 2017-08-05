@@ -1,6 +1,30 @@
+@import "../../styles/variables";
+
 #sujan {
   .prodfilter {
     display: flex;
     flex-direction: column;
+
+    md-input-container {
+      .reset-value {
+        position: absolute;
+        cursor: pointer;
+        left: 270px;
+        bottom: 3px;
+
+        &:hover {
+          text-decoration: none;
+        }
+        & .fa-times {
+          color: $accentColor;
+          text-shadow: 1px 1px 1px $textShadow;
+          font-size: 20px;
+        }
+      }
+    }
+    .accent-btn {
+      background: $accentColor;
+      color: white;
+    }
   }
 }

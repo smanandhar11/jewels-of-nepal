@@ -5,6 +5,9 @@ md-tabs md-ink-bar {
 }
 
 //md-select
+md-select .md-select-value.md-select-placeholder {
+  color: #323232;
+}
 md-select-value {
   //max-width: 200px;
   span {
@@ -25,3 +28,4 @@ md-input-container:not(.md-input-invalid).md-input-has-value label {
   color: $primaryColor;
   font-size: 14px;
 }
+//md-select .md-select-value.md-select-placeholder
