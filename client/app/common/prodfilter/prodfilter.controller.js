@@ -25,12 +25,13 @@ class ProdfilterController {
       '500-1000',
       '1000 and more'
     ];
+    //setting all resp. ng-model to null
     this.colorModel = null;
     this.typeModel = null;
     this.priceModel = null;
   }
 
-  // storing colorSelected in a var
+  // storing all md-Selected in a var
   colorSelect(value) {
     this.colorSelected = value;
   }
@@ -43,6 +44,7 @@ class ProdfilterController {
     this.priceSelected = price;
   }
 
+  //onclick: reset value to null
   resetColor() {
     this.colorSelected = '';
     this.colorModel = null;

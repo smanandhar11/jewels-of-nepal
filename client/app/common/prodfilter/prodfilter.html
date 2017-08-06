@@ -39,5 +39,8 @@
   </md-input-container>
 
   <!--reset filter-->
-  <md-button class="md-raised accent-btn" ng-if="$ctrl.colorModel || $ctrl.typeModel || $ctrl.priceModel" ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reset All</md-button>
+  <!--ng-if:longLogic put into $ctrl-->
+  <md-button class="md-raised accent-btn"
+             ng-if="$ctrl.colorModel && $ctrl.typeModel || $ctrl.typeModel && $ctrl.priceModel || $ctrl.priceModel && $ctrl.colorModel"
+             ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reset All</md-button>
 </div>
