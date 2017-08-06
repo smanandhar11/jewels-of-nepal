@@ -12,7 +12,7 @@ config.plugins = config.plugins.concat([
 
   // Adds webpack HMR support. It act's like livereload,
   // reloading page after webpack rebuilt modules.
-  // It also updates stylesheets and inline assets without page reloading.
+  // It also updates stylesheets and inline resources without page reloading.
   new webpack.HotModuleReplacementPlugin()
 ]);
 

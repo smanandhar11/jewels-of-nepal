@@ -9,7 +9,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'58px',
-        'imgSrc':'../../../app/assets/images/product-images/saphire-fall.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/saphire-fall.jpg'
       },
 
       {
@@ -20,7 +20,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'center',
         'nameSpace':'58px',
-        'imgSrc':'../../../app/assets/images/product-images/purple-haze.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/purple-haze.jpg'
       },
 
       {
@@ -32,7 +32,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'center',
         'nameSpace':'50px',
-        'imgSrc':'../../../app/assets/images/product-images/straw-cough.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/straw-cough.jpg'
       },
       {
         'name':'Mars Burning',
@@ -42,7 +42,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'center',
         'nameSpace':'58px',
-        'imgSrc':'../../../app/assets/images/product-images/mars-burning.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/mars-burning.jpg'
       },
       {
         'name':'Simpearl',
@@ -52,7 +52,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'64px',
-        'imgSrc':'../../../app/assets/images/product-images/simpearl.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/simpearl.jpg'
       },
 
       {
@@ -63,7 +63,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/deep-blue-fall.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/deep-blue-fall.jpg'
       },
       {
         'name':'Black Diamond',
@@ -73,7 +73,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/black-diamond.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/black-diamond.jpg'
       },
       {
         'name':'Elegant Pearl',
@@ -83,7 +83,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/elegant-pearl.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/elegant-pearl.jpg'
       },
       {
         'name':'Green Eyed Bird',
@@ -93,7 +93,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/green-eyed-bird.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/green-eyed-bird.jpg'
       },
       {
         'name':'Two Sun',
@@ -103,7 +103,7 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/two-sun.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/two-sun.jpg'
       },
       {
         'name':'Emerald Splash',
@@ -113,17 +113,17 @@ class ProddisplayController {
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/emerald-splash.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/emerald-splash.jpg'
       },
       {
         'name':'Gothic Black',
         'type':'Earring',
-        'colorCategory':'Others',
+        'colorCategory':'Black ',
         'priceRange':'100-500',
         'price':'Rs.250',
         'bgPosition':'bottom',
         'nameSpace':'45px',
-        'imgSrc':'../../../app/assets/images/product-images/gothic-black.jpg'
+        'imgSrc':'../../../app/resources/images/product-images/gothic-black.jpg'
       }
     ];
   }
