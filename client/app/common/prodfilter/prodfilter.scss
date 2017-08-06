@@ -7,10 +7,10 @@
 
     md-input-container {
       .reset-value {
-        position: absolute;
         cursor: pointer;
-        left: 378px;
-        bottom: 3px;
+        position: absolute;
+        left: -20px;
+        top: 7px;
 
         &:hover {
           text-decoration: none;
