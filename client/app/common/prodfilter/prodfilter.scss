@@ -6,22 +6,27 @@
     flex-direction: column;
 
     md-input-container {
-      .reset-value {
-        cursor: pointer;
+      .accent-btn-ed {
+        background-color:#ff9797 ;
         position: absolute;
-        left: -20px;
-        top: 7px;
+        left: -104px;
+        top: -10px;
+        opacity: .6;
 
         &:hover {
-          text-decoration: none;
-        }
-        & .fa-times {
-          color: $accentColor;
-          text-shadow: 1px 1px 1px $textShadow;
-          font-size: 20px;
+          background-color: #ff5252;
         }
       }
     }
+    .color-mode-link {
+      color: #cccccc;
+      float: right;
+      cursor: pointer;
+      position: absolute;
+      top: 209px;
+      left: 248px;
+    }
+    //todo: move to utilities
     .accent-btn {
       background: $accentColor;
       color: white;

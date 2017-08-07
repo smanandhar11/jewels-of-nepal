@@ -29,6 +29,9 @@ class ProdfilterController {
     this.colorModel = null;
     this.typeModel = null;
     this.priceModel = null;
+
+    //instantiating colorSwitch
+    this.advanceMode = false;
   }
 
   // storing all md-Selected in a var
@@ -59,6 +62,11 @@ class ProdfilterController {
     this.priceSelected = '';
     this.priceModel = null;
   }
+
+  switchCtrl() {
+    this.advanceMode = !this.advanceMode;
+  }
+
 }
 
 export default ProdfilterController;

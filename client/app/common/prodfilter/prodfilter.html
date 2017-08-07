@@ -1,6 +1,7 @@
 <div class="prodfilter">
   <!--Colors-->
-  <md-input-container>
+  {{$ctrl.advanceMode}}
+  <md-input-container ng-if="!$ctrl.advanceMode">
     <label>Color</label>
     <md-select ng-model="$ctrl.colorModel">
       <md-option ng-repeat="color in $ctrl.colors"
@@ -8,9 +9,18 @@
                  ng-click="$ctrl.colorSelect(color)">
         {{color}}
       </md-option>
-    </md-select>
-    <a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>
+    </md-select><!--Testing ln:12>>>>13-->
+    <md-button ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+      <!--transfer inline css -->
+      <i class="fa fa-times"
+         style="float: right; margin-right: 0; font-size: 18px;"></i>
+    </md-button>
+
+    <!--todo:remove below line aft tests
+    <!--<a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
+
+  <a class="color-mode-link" ng-click="$ctrl.switchCtrl()">Advanced</a>
 
   <!--Types-->
   <md-input-container>
@@ -22,7 +32,12 @@
         {{type}}
       </md-option>
     </md-select>
-    <a class="reset-value" ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"><i class="fa fa-times"></i></a>
+    <md-button ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+      <!--transfer inline css -->
+      <i class="fa fa-times"
+         style="float: right; margin-right: 0; font-size: 18px;"></i>
+    </md-button>
+    <!--<a class="reset-value" ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
 
   <!--Price Range-->
@@ -35,7 +50,12 @@
         {{price}}
       </md-option>
     </md-select>
-    <a class="reset-value" ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"><i class="fa fa-times"></i></a>
+    <md-button ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+      <!--transfer inline css -->
+      <i class="fa fa-times"
+         style="float: right; margin-right: 0; font-size: 18px;"></i>
+    </md-button>
+    <!--<a class="reset-value" ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
 
   <!--reset filter-->
