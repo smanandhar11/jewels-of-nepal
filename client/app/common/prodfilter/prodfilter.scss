@@ -38,18 +38,33 @@
         width: 43%;
       }
     }
-    .color-mode-link {
-      color: #cccccc;
-      float: right;
-      cursor: pointer;
-      position: absolute;
-      top: 213px;
-      left: 277px;
-    }
+
     //todo: move to utilities
     .accent-btn {
       background: $accentColor;
       color: white;
+    }
+    .main-input-container {
+      .adv-switch-container {
+        display: flex;
+        position: absolute;
+        top: 216px;
+
+        .switch-info {
+          color: $textShadow;
+        }
+        .adv-color {
+          color: $primaryColor;
+          font-weight: bold;
+        }
+
+        md-switch {
+          margin:0;
+          position: relative;
+          left: 125px;
+          bottom: 10px;
+        }
+      }
     }
   }
 }

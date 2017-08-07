@@ -48,6 +48,7 @@ class ProdfilterController {
   colorSelect(value) {
     this.colorSelected = value;
   }
+
   baseColorSelect(value) {
     this.baseColorSelected = value;
   }

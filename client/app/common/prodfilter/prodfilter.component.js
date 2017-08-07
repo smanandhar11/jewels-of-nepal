@@ -6,7 +6,8 @@ let prodfilterComponent = {
   bindings: {
     colorSelected:'=',
     typeSelected: '=',
-    priceSelected: '='
+    priceSelected: '=',
+    baseColorSelected: '='
   },
   template,
   controller

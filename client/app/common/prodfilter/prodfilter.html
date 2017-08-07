@@ -39,15 +39,17 @@
                  class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
         <i class="fa fa-times"></i>
       </md-button>
-
-      <!--todo:remove below line aft tests
-      <!--<a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>-->
     </md-input-container>
 
-    <a class="color-mode-link" ng-click="$ctrl.switchCtrl()">
-      <span ng-if="!$ctrl.advanceMode">Advanced</span>
-      <span ng-if="$ctrl.advanceMode">Simple</span>
-    </a>
+    <!--Color Scheme Switch-->
+    <div class="adv-switch-container">
+      <span class="switch-info"
+            ng-class="{'adv-color': $ctrl.advanceMode}">
+        Advanced mode: <span ng-if="!$ctrl.advanceMode">OFF</span>
+        <span ng-if="$ctrl.advanceMode">ON</span></span>
+      <md-switch class="md-primary" ng-click="$ctrl.switchCtrl()"></md-switch>
+    </div>
+
   </div>
 
 
@@ -66,7 +68,6 @@
 
       <i class="fa fa-times"></i>
     </md-button>
-    <!--<a class="reset-value" ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
 
   <!--Price Range-->
@@ -83,7 +84,6 @@
                class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
       <i class="fa fa-times"></i>
     </md-button>
-    <!--<a class="reset-value" ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
 
   <!--reset filter-->
