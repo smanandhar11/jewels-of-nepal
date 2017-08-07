@@ -8,7 +8,7 @@
     //todo: resolve !important
     md-input-container {
       .accent-btn-ed {
-        background-color:#ff9797 ;
+        background-color:#ff5252 ;
         position: absolute;
         left: -34px;
         top: 0;
@@ -20,7 +20,7 @@
         border-radius: 15px;
 
         &:hover {
-          background-color: #ff5252;
+          opacity: 1;
         }
         .fa.fa-times {
           position: relative;
@@ -43,6 +43,11 @@
     .accent-btn {
       background: $accentColor;
       color: white;
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
     }
     .main-input-container {
       .adv-switch-container {
