@@ -5,17 +5,37 @@
     display: flex;
     flex-direction: column;
 
+    //todo: resolve !important
     md-input-container {
       .accent-btn-ed {
         background-color:#ff9797 ;
         position: absolute;
-        left: -104px;
-        top: -10px;
+        left: -34px;
+        top: 0;
         opacity: .6;
+        min-width: 23px!important;
+        max-width: 23px!important;
+        min-height: 25px !important;
+        max-height: 25px !important;
+        border-radius: 15px;
 
         &:hover {
           background-color: #ff5252;
         }
+        .fa.fa-times {
+          position: relative;
+          bottom: 5px;
+        }
+      }
+      &.pri-clr-container{
+        width: 100%;
+      }
+      &.small-width {
+        width: 43%;
+        margin-right: 25px;
+      }
+      &.sec-clr-container {
+        width: 43%;
       }
     }
     .color-mode-link {
@@ -23,8 +43,8 @@
       float: right;
       cursor: pointer;
       position: absolute;
-      top: 209px;
-      left: 248px;
+      top: 213px;
+      left: 277px;
     }
     //todo: move to utilities
     .accent-btn {

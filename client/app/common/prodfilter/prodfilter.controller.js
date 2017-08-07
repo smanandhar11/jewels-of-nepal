@@ -11,6 +11,15 @@ class ProdfilterController {
       'Others'
     ];
 
+    this.baseColors = [
+      'Golden',
+      'Silver',
+      'Cooper',
+      'Bronze',
+      'Rustic',
+      'Metallic'
+    ];
+
     this.types = [
       'Earrings',
       'Bracelets',
@@ -29,6 +38,7 @@ class ProdfilterController {
     this.colorModel = null;
     this.typeModel = null;
     this.priceModel = null;
+    this.baseColorModel = null;
 
     //instantiating colorSwitch
     this.advanceMode = false;
@@ -37,6 +47,9 @@ class ProdfilterController {
   // storing all md-Selected in a var
   colorSelect(value) {
     this.colorSelected = value;
+  }
+  baseColorSelect(value) {
+    this.baseColorSelected = value;
   }
 
   typeSelect(type) {
@@ -51,6 +64,12 @@ class ProdfilterController {
   resetColor() {
     this.colorSelected = '';
     this.colorModel = null;
+  }
+
+  resetBaseColor() {
+    this.baseColorSelected = '';
+    console.log('>>',this.baseColorModel);
+    this.baseColorModel = null;
   }
 
   resetType() {

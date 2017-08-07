@@ -1,26 +1,55 @@
 <div class="prodfilter">
   <!--Colors-->
-  {{$ctrl.advanceMode}}
-  <md-input-container ng-if="!$ctrl.advanceMode">
-    <label>Color</label>
-    <md-select ng-model="$ctrl.colorModel">
-      <md-option ng-repeat="color in $ctrl.colors"
-                 value="{{color}}"
-                 ng-click="$ctrl.colorSelect(color)">
-        {{color}}
-      </md-option>
-    </md-select><!--Testing ln:12>>>>13-->
-    <md-button ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
-      <!--transfer inline css -->
-      <i class="fa fa-times"
-         style="float: right; margin-right: 0; font-size: 18px;"></i>
-    </md-button>
+  <div class="main-input-container">
+    <!--Primary Color-->
+    <md-input-container class="pri-clr-container"
+                        ng-class="{'small-width': $ctrl.advanceMode}">
+      <label>
+        <span ng-if="!$ctrl.advanceMode">Color</span>
+        <span ng-if="$ctrl.advanceMode">Primary</span>
+      </label>
+      <md-select ng-model="$ctrl.colorModel">
+        <md-option ng-repeat="color in $ctrl.colors"
+                   value="{{color}}"
+                   ng-click="$ctrl.colorSelect(color)">
+          {{color}}
+        </md-option>
+      </md-select>
+      <md-button ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"
+                 class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+        <i class="fa fa-times"></i>
+      </md-button>
 
-    <!--todo:remove below line aft tests
-    <!--<a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>-->
-  </md-input-container>
+      <!--todo:remove below line aft tests
+      <!--<a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>-->
+    </md-input-container>
 
-  <a class="color-mode-link" ng-click="$ctrl.switchCtrl()">Advanced</a>
+    <!--Base Color-->
+    <md-input-container ng-if="$ctrl.advanceMode"
+                        class="sec-clr-container">
+      <label>Base</label>
+      <md-select ng-model="$ctrl.baseColorModel">
+        <md-option ng-repeat="color in $ctrl.baseColors"
+                   value="{{color}}"
+                   ng-click="$ctrl.baseColorSelect(color)">
+          {{color}}
+        </md-option>
+      </md-select>
+      <md-button ng-if="$ctrl.baseColorModel" ng-click="$ctrl.resetBaseColor()"
+                 class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+        <i class="fa fa-times"></i>
+      </md-button>
+
+      <!--todo:remove below line aft tests
+      <!--<a class="reset-value" ng-if="$ctrl.colorModel" ng-click="$ctrl.resetColor()"><i class="fa fa-times"></i></a>-->
+    </md-input-container>
+
+    <a class="color-mode-link" ng-click="$ctrl.switchCtrl()">
+      <span ng-if="!$ctrl.advanceMode">Advanced</span>
+      <span ng-if="$ctrl.advanceMode">Simple</span>
+    </a>
+  </div>
+
 
   <!--Types-->
   <md-input-container>
@@ -32,10 +61,10 @@
         {{type}}
       </md-option>
     </md-select>
-    <md-button ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
-      <!--transfer inline css -->
-      <i class="fa fa-times"
-         style="float: right; margin-right: 0; font-size: 18px;"></i>
+    <md-button ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"
+               class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+
+      <i class="fa fa-times"></i>
     </md-button>
     <!--<a class="reset-value" ng-if="$ctrl.typeModel" ng-click="$ctrl.resetType()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
@@ -50,10 +79,9 @@
         {{price}}
       </md-option>
     </md-select>
-    <md-button ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()" class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
-      <!--transfer inline css -->
-      <i class="fa fa-times"
-         style="float: right; margin-right: 0; font-size: 18px;"></i>
+    <md-button ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"
+               class="md-raised md-warn md-button md-ink-ripple accent-btn-ed">
+      <i class="fa fa-times"></i>
     </md-button>
     <!--<a class="reset-value" ng-if="$ctrl.priceModel" ng-click="$ctrl.resetPrice()"><i class="fa fa-times"></i></a>-->
   </md-input-container>
@@ -61,6 +89,12 @@
   <!--reset filter-->
   <!--ng-if:longLogic put into $ctrl-->
   <md-button class="md-raised accent-btn"
-             ng-if="$ctrl.colorModel && $ctrl.typeModel || $ctrl.typeModel && $ctrl.priceModel || $ctrl.priceModel && $ctrl.colorModel"
-             ng-click="$ctrl.resetColor();$ctrl.resetType();$ctrl.resetPrice()">Reset All</md-button>
+             ng-if="$ctrl.colorModel && $ctrl.typeModel ||
+                    $ctrl.typeModel && $ctrl.priceModel ||
+                    $ctrl.priceModel && $ctrl.colorModel"
+             ng-click="$ctrl.resetColor();
+                       $ctrl.resetType();
+                       $ctrl.resetPrice()">
+    Reset All
+  </md-button>
 </div>
