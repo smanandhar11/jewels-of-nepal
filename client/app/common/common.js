@@ -6,6 +6,7 @@ import Wrapper from './wrapper/wrapper';
 import Footer from './footer/footer';
 import ProdFilter from './prodfilter/prodfilter';
 import ProdDisplay from './proddisplay/proddisplay';
+import Billboard from './billboard/billboard';
 
 let commonModule = angular.module('app.common', [
   Header,
@@ -14,7 +15,8 @@ let commonModule = angular.module('app.common', [
   Wrapper,
   Footer,
   ProdFilter,
-  ProdDisplay
+  ProdDisplay,
+  Billboard
 ])
 
 .name;
