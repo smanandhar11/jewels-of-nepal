@@ -1,6 +1,75 @@
+@import "../../styles/variables";
+
 #sujan {
   .prodfilter {
     display: flex;
     flex-direction: column;
+
+    //todo: resolve !important
+    md-input-container {
+      .accent-btn-ed {
+        background-color:#ff5252 ;
+        position: absolute;
+        left: -34px;
+        top: 0;
+        opacity: .6;
+        min-width: 23px!important;
+        max-width: 23px!important;
+        min-height: 25px !important;
+        max-height: 25px !important;
+        border-radius: 15px;
+
+        &:hover {
+          opacity: 1;
+        }
+        .fa.fa-times {
+          position: relative;
+          bottom: 5px;
+        }
+      }
+      &.pri-clr-container{
+        width: 100%;
+      }
+      &.small-width {
+        width: 43%;
+        margin-right: 25px;
+      }
+      &.sec-clr-container {
+        width: 43%;
+      }
+    }
+
+    //todo: move to utilities
+    .accent-btn {
+      background: $accentColor;
+      color: white;
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .main-input-container {
+      .adv-switch-container {
+        display: flex;
+        position: absolute;
+        top: 216px;
+
+        .switch-info {
+          color: $textShadow;
+        }
+        .adv-color {
+          color: $primaryColor;
+          font-weight: bold;
+        }
+
+        md-switch {
+          margin:0;
+          position: relative;
+          left: 125px;
+          bottom: 10px;
+        }
+      }
+    }
   }
 }
