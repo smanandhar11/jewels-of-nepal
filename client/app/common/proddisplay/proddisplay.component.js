@@ -3,7 +3,9 @@ import controller from './proddisplay.controller';
 import './proddisplay.scss';
 
 let proddisplayComponent = {
-  bindings: {},
+  bindings: {
+
+  },
   require: {
     galleryComp:'^gallery'
   },

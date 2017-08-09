@@ -1,3 +1,24 @@
 .billboard {
-  color: red;
+  .board-container {
+    .simple-carousel {
+      .arrows {
+        position: absolute;
+        bottom: 388px;
+        i {
+          font-size: 35px;
+          color: #000000;
+          cursor: pointer;
+        }
+        .fa-chevron-right {
+          position: relative;
+          left: 535px;
+        }
+      }
+      .images-container {
+        .inactive {
+          display: none;
+        }
+      }
+    }
+  }
 }
