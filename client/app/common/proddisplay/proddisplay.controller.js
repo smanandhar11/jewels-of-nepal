@@ -185,7 +185,7 @@ class ProddisplayController {
     this.intProduct.bgColor = product.bgColor;
     this.intProduct.primeColor = product.primeColor;
     this.intProduct.imgSrc = product.imgSrc;
-
+    console.log(this.intProduct);
     this.$state.go('proddetails');
   }
 }
