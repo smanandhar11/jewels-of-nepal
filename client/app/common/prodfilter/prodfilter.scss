@@ -37,6 +37,9 @@
       &.sec-clr-container {
         width: 43%;
       }
+      &.type-input {
+        margin-top: 5px;
+      }
     }
 
     //todo: move to utilities
@@ -52,13 +55,23 @@
     .main-input-container {
       display: flex;
       flex-wrap: nowrap;
+      flex-direction: column;
+      .color-input-container {
+        display: flex;
+        flex-wrap: nowrap;
+
+        md-input-container {
+          margin-bottom: 0;
+        }
+      }
       .adv-switch-container {
         display: flex;
-        position: absolute;
-        top: 216px;
+        justify-content: space-between;
 
         .switch-info {
           color: $textShadow;
+          position: relative;
+          top: 7px;
         }
         .adv-color {
           color: $primaryColor;
@@ -67,11 +80,13 @@
 
         md-switch {
           margin:0;
-          position: relative;
-          left: 125px;
-          bottom: 10px;
+
         }
       }
+    }
+
+    @media (max-width: 485px) {
+
     }
   }
 }
