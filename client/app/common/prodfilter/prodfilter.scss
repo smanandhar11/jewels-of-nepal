@@ -50,6 +50,8 @@
       }
     }
     .main-input-container {
+      display: flex;
+      flex-wrap: nowrap;
       .adv-switch-container {
         display: flex;
         position: absolute;
