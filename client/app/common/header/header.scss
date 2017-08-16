@@ -35,7 +35,7 @@
     }
   }
   //define breakpoint in variable and use them
-  @media (max-width: 485px) {
+  @media (max-width: $mobile) {
     .header-container {
       justify-content: center;
       .header-right {
