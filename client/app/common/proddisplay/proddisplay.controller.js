@@ -27,8 +27,10 @@ class ProddisplayController {
         'bgPosition': 'center',
         'nameSpace': '58px',
         'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg'
+        'primeColor':'#63BBBC',
+        'altColor':'#B2A18D',
+        'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg',
+        'altColorProd':'../../../app/resources/images/product-images/cream-angel.jpg'
       },
 
       {

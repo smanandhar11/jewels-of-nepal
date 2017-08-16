@@ -29,6 +29,14 @@
         font-weight: bold;
         font-family: 'Muli', sans-serif;
       }
+      .alt-color-container {
+        .alt-circle {
+          width: 15px;
+          height: 15px;
+          border: 1px solid $textShadow;
+          border-radius: 25px;
+        }
+      }
     }
     .circled-animation {
       border: 7px solid #108bc8;

@@ -16,5 +16,9 @@
                 ">
     </div>
     <div class="prod-name" style="left: {{product.nameSpace}};">{{product.name}}</div>
+    <div class="alt-color-container" ng-if="product.altColorProd">
+      <div class="alt-circle" style="background: {{product.primeColor}}"></div>
+      <div class="alt-circle" style="background: {{product.altColor}}"></div>
+    </div>
   </div>
 </div>
