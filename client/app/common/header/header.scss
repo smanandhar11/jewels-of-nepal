@@ -31,39 +31,7 @@
       //}
     }
     .header-right {
-      .social-section {
-        list-style: none;
-        display: flex;
-        margin: 41px 0 0 0;
-        padding: 0;
-        a {
-          margin-right: 15px;
-          font-size: 20px;
-          color: $primaryColor;
-          border: 1px solid #ccc;
-          border-radius: 44px;
 
-          li {
-            border-radius: 15px;
-            .fa-facebook {
-              padding: 5px 10px;
-            }
-            .fa-twitter {
-              padding: 5px 6px;
-            }
-            .fa-youtube {
-              padding: 5px 7px;
-            }
-            .fa-instagram {
-              padding: 5px 8px;
-            }
-            &:hover {
-              color: white;
-              background: $primaryColor;
-            }
-          }
-        }
-      }
     }
   }
   //define breakpoint in variable and use them

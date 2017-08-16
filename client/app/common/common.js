@@ -1,22 +1,24 @@
 import angular from 'angular';
+import Billboard from './billboard/billboard';
+import Footer from './footer/footer';
 import Header from './header/header';
 import Hero from './hero/hero';
+import ProdDisplay from './proddisplay/proddisplay';
+import ProdFilter from './prodfilter/prodfilter';
+import Social from './social/social';
 import User from './user/user';
 import Wrapper from './wrapper/wrapper';
-import Footer from './footer/footer';
-import ProdFilter from './prodfilter/prodfilter';
-import ProdDisplay from './proddisplay/proddisplay';
-import Billboard from './billboard/billboard';
 
 let commonModule = angular.module('app.common', [
+  Billboard,
+  Footer,
   Header,
   Hero,
+  ProdDisplay,
+  ProdFilter,
+  Social,
   User,
   Wrapper,
-  Footer,
-  ProdFilter,
-  ProdDisplay,
-  Billboard
 ])
 
 .name;
