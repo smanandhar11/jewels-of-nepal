@@ -18,7 +18,7 @@ class ProddisplayController {
       },
 
       {
-        'name': 'Purple Haze',
+        'name': 'Turquoise Angel',
         'type': 'Earrings',
         'mainColor': 'Blue',
         'baseColor': 'silver',
@@ -28,11 +28,11 @@ class ProddisplayController {
         'nameSpace': '58px',
         'bgColor':'',
         'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/purple-haze.jpg'
+        'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg'
       },
 
       {
-        'name': 'Strawberry Cough',
+        'name': 'Golden Crescent',
         'type': 'Bracelet',
         'mainColor': 'Blue',
         'baseColor': 'bronze',
@@ -43,7 +43,7 @@ class ProddisplayController {
         'nameSpace': '50px',
         'bgColor':'',
         'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/straw-cough.jpg'
+        'imgSrc': '../../../app/resources/images/product-images/golden-crescent.jpg'
       },
       {
         'name': 'Mars Burning',
