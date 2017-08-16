@@ -16,7 +16,7 @@ class ProddisplayController {
         'primeColor':'',
         'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg'
       },
-
+      //main trial product
       {
         'name': 'Turquoise Angel',
         'type': 'Earrings',
@@ -27,10 +27,15 @@ class ProddisplayController {
         'bgPosition': 'center',
         'nameSpace': '58px',
         'bgColor':'',
-        'primeColor':'#63BBBC',
-        'altColor':'#B2A18D',
+        'primeColor':'#63BBBC', //not sure need this
         'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg',
-        'altColorProd':'../../../app/resources/images/product-images/cream-angel.jpg'
+
+        'altColorProd': {
+          'altOne': {
+            'imgSrc':'../../../app/resources/images/product-images/cream-angel.jpg',
+            'altColor': '#B2A18D'
+          }
+        }
       },
 
       {
@@ -175,6 +180,7 @@ class ProddisplayController {
       imgSrc: '',
     };
     this.$state = $state;
+    this.mainSt = true;
 
   }
 
@@ -189,6 +195,23 @@ class ProddisplayController {
     this.intProduct.imgSrc = product.imgSrc;
     console.log(this.intProduct);
     this.$state.go('proddetails');
+  }
+
+  switchColor(product, altImgSrc) {
+    let mainImg = product.imgSrc;
+    let secImg = altImgSrc;
+
+
+
+    if(this.mainSt = true){
+      product.imgSrc = secImg;
+      this.mainSt = false;
+      console.log('<>', this.mainSt);
+    }
+    if(this.mainSt = false) {
+      product.imgSrc = mainImg;
+    }
+
   }
 }
 

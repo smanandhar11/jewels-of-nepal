@@ -1,24 +1,32 @@
 <div class="prod-display">
-  <div class="circle"
-       ng-model="selected"
-       ng-click="$ctrl.prodSelect(product)"
+  <div class="repeater"
        ng-repeat="product in $ctrl.products | filter:$ctrl.galleryComp.colorValue
                                             | filter:$ctrl.galleryComp.typeValue
                                             | filter:$ctrl.galleryComp.priceValue
                                             | filter:$ctrl.galleryComp.baseColorValue">
-    <div class="prod-image"
-         style="background: url({{product.imgSrc}});
+    <div class="circle">
+      <div class="prod-image" style="background: url({{product.imgSrc}});
                 width: 100%;
                 height: 100%;
                 background-size: cover;
                 border-radius: 100px;
-                background-position: {{product.bgPosition}};
-                ">
+                background-position: {{product.bgPosition}};"
+           ng-click="$ctrl.prodSelect(product)">
+      </div>
+      <div class="prod-name" style="left: {{product.nameSpace}};">{{product.name}}</div>
     </div>
-    <div class="prod-name" style="left: {{product.nameSpace}};">{{product.name}}</div>
     <div class="alt-color-container" ng-if="product.altColorProd">
-      <div class="alt-circle" style="background: {{product.primeColor}}"></div>
-      <div class="alt-circle" style="background: {{product.altColor}}"></div>
+
+      <!--<div class="alt-circle" style="background: {{product.primeColor}}"></div>-->
+      <div ng-repeat="alt in product.altColorProd"
+           class="alt-circle"
+           ng-click="$ctrl.switchColor(product, alt.imgSrc)"
+           style="background: {{alt.altColor}}"></div>
     </div>
+
+    <!--<div class="alt-color-container" ng-if="product.altColorProd">-->
+      <!--<div class="alt-circle" style="background: {{product.primeColor}}"></div>-->
+      <!--<div class="alt-circle" style="background: {{product.altColor}}"></div>-->
+    <!--</div>-->
   </div>
 </div>
