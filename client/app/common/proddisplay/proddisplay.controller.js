@@ -183,7 +183,7 @@ class ProddisplayController {
       imgSrc: '',
     };
     this.$state = $state;
-    this.mainSt = true;
+
 
   }
 
