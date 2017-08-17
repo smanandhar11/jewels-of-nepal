@@ -5,7 +5,7 @@
                                             | filter:$ctrl.galleryComp.priceValue
                                             | filter:$ctrl.galleryComp.baseColorValue">
     <div class="circle">
-      <div class="prod-image" style="background: url({{product.imgSrc}});
+      <div class="prod-image" style="background: url({{product.options[product.activeOption].imgSrc}});
                 width: 100%;
                 height: 100%;
                 background-size: cover;
@@ -15,13 +15,13 @@
       </div>
       <div class="prod-name" style="left: {{product.nameSpace}};">{{product.name}}</div>
     </div>
-    <div class="alt-color-container" ng-if="product.altColorProd">
+    <div class="alt-color-container" ng-if="product.options.length">
 
       <!--<div class="alt-circle" style="background: {{product.primeColor}}"></div>-->
-      <div ng-repeat="alt in product.altColorProd"
+      <div ng-repeat="option in product.options track by $index"
            class="alt-circle"
-           ng-click="$ctrl.switchColor(product, alt.imgSrc)"
-           style="background: {{alt.altColor}}"></div>
+           ng-click="$ctrl.switchColor(product, $index)"
+           style="background: {{option.color}}"></div>
     </div>
 
     <!--<div class="alt-color-container" ng-if="product.altColorProd">-->

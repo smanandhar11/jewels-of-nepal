@@ -28,14 +28,17 @@ class ProddisplayController {
         'nameSpace': '58px',
         'bgColor':'',
         'primeColor':'#63BBBC', //not sure need this
-        'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg',
-
-        'altColorProd': {
-          'altOne': {
-            'imgSrc':'../../../app/resources/images/product-images/cream-angel.jpg',
-            'altColor': '#B2A18D'
+        activeOption: 1,
+        options: [
+          {
+            imgSrc: '../../../app/resources/images/product-images/turquoise-angel.jpg',
+            color: '#63BBBC'
+          },
+          {
+            imgSrc: '../../../app/resources/images/product-images/cream-angel.jpg',
+            color: '#B2A18D'
           }
-        }
+        ],
       },
 
       {
@@ -197,21 +200,8 @@ class ProddisplayController {
     this.$state.go('proddetails');
   }
 
-  switchColor(product, altImgSrc) {
-    let mainImg = product.imgSrc;
-    let secImg = altImgSrc;
-
-
-
-    if(this.mainSt = true){
-      product.imgSrc = secImg;
-      this.mainSt = false;
-      console.log('<>', this.mainSt);
-    }
-    if(this.mainSt = false) {
-      product.imgSrc = mainImg;
-    }
-
+  switchColor(product, index) {
+    product.activeOption = index;
   }
 }
 
