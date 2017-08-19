@@ -14,7 +14,13 @@ class ProddisplayController {
         'nameSpace': '58px',
         'bgColor':'',
         'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg'
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg',
+            'color':''
+          }
+        ],
       },
       //main trial product
       {
@@ -28,7 +34,7 @@ class ProddisplayController {
         'nameSpace': '58px',
         'bgColor':'',
         'primeColor':'#63BBBC', //not sure need this
-        activeOption: 1,
+        activeOption: 0,
         options: [
           {
             imgSrc: '../../../app/resources/images/product-images/turquoise-angel.jpg',
