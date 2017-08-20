@@ -1,4 +1,3 @@
-
 class ProddisplayController {
   constructor($state) {
     'ngInject';
@@ -12,13 +11,13 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '58px',
-        'bgColor':'',
-        'primeColor':'',
+        'bgColor': '',
+        'primeColor': '',
         activeOption: 0,
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg',
-            'color':''
+            'color': ''
           }
         ],
       },
@@ -32,8 +31,8 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'center',
         'nameSpace': '58px',
-        'bgColor':'',
-        'primeColor':'#63BBBC', //not sure need this
+        'bgColor': '',
+        'primeColor': '#63BBBC', //not sure need this
         activeOption: 0,
         options: [
           {
@@ -57,9 +56,15 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'center',
         'nameSpace': '50px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/golden-crescent.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/golden-crescent.jpg',
+            'color': ''
+          }
+        ],
       },
       {
         'name': 'Mars Burning',
@@ -70,10 +75,17 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'center',
         'nameSpace': '58px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/mars-burning.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/mars-burning.jpg',
+            'color': ''
+          }
+        ],
       },
+
       {
         'name': 'Simpearl',
         'type': 'Earrings',
@@ -83,9 +95,15 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '64px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/simpearl.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/simpearl.jpg',
+            'color': ''
+          }
+        ],
       },
 
       {
@@ -97,9 +115,16 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/deep-blue-fall.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/deep-blue-fall.jpg',
+            'color': ''
+          }
+        ],
+
       },
       {
         'name': 'Black Diamond',
@@ -110,9 +135,16 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/black-diamond.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/black-diamond.jpg',
+            'color': ''
+          }
+        ],
+
       },
       {
         'name': 'Elegant Pearl',
@@ -123,10 +155,17 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/elegant-pearl.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/elegant-pearl.jpg',
+            'color': ''
+          }
+        ],
       },
+
       {
         'name': 'Green Eyed Bird',
         'type': 'Earrings',
@@ -136,10 +175,17 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/green-eyed-bird.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/green-eyed-bird.jpg',
+            'color': ''
+          }
+        ],
       },
+
       {
         'name': 'Two Sun',
         'type': 'Earring',
@@ -149,10 +195,17 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/two-sun.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/two-sun.jpg',
+            'color': ''
+          }
+        ],
       },
+
       {
         'name': 'Emerald Splash',
         'type': 'Earring',
@@ -162,10 +215,17 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/emerald-splash.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/emerald-splash.jpg',
+            'color': ''
+          }
+        ],
       },
+
       {
         'name': 'Gothic Black',
         'type': 'Earring',
@@ -175,17 +235,23 @@ class ProddisplayController {
         'price': 'Rs.250',
         'bgPosition': 'bottom',
         'nameSpace': '45px',
-        'bgColor':'',
-        'primeColor':'',
-        'imgSrc': '../../../app/resources/images/product-images/gothic-black.jpg'
+        'bgColor': '',
+        'primeColor': '',
+        activeOption: 0,
+        options: [
+          {
+            'imgSrc': '../../../app/resources/images/product-images/gothic-black.jpg',
+            'color': ''
+          }
+        ],
       }
     ];
     this.intProduct = {
       name: '',
-      type:'',
-      price:'',
-      bgColor:'',
-      primeColor:'',
+      type: '',
+      price: '',
+      bgColor: '',
+      primeColor: '',
       imgSrc: '',
     };
     this.$state = $state;

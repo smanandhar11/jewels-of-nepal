@@ -16,13 +16,11 @@
       <div class="prod-name" style="left: {{product.nameSpace}};">{{product.name}}</div>
     </div>
     <div class="alt-color-container" ng-if="product.options.length > 1">
-
       <!--<div class="alt-circle" style="background: {{product.primeColor}}"></div>-->
       <div ng-repeat="option in product.options track by $index"
            class="alt-circle"
            ng-click="$ctrl.switchColor(product, $index)"
            style="background: {{option.color}}"></div>
     </div>
-
   </div>
 </div>

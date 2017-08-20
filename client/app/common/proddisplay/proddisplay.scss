@@ -9,6 +9,7 @@
 
     .repeater {
       display: flex;
+      flex-direction: column;
 
       .circle {
         height: 180px;
@@ -38,9 +39,8 @@
       border: 7px solid #108bc8;
     }
     .alt-color-container {
+      display: flex;
       align-self: center;
-      margin-left: 10px;
-      margin-bottom: 12px;
       .alt-circle {
         width: 15px;
         height: 15px;
