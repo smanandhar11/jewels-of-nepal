@@ -3,7 +3,6 @@ class ProddisplayController {
     'ngInject';
     this.products = [
       {
-        'name': 'Blue Dream',
         'type': 'Necklace',
         'mainColor': 'blue',
         'baseColor': 'golden',
@@ -17,13 +16,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg',
+            'name': 'Blue Dream',
             'color': ''
           }
         ],
       },
       //main trial product
       {
-        'name': 'Turquoise Angel',
         'type': 'Earrings',
         'mainColor': 'Blue',
         'baseColor': 'silver',
@@ -36,18 +35,19 @@ class ProddisplayController {
         activeOption: 0,
         options: [
           {
-            imgSrc: '../../../app/resources/images/product-images/turquoise-angel.jpg',
-            color: '#63BBBC'
+            'imgSrc': '../../../app/resources/images/product-images/turquoise-angel.jpg',
+            'name': 'Turquoise Angel',
+            'color': '#63BBBC'
           },
           {
-            imgSrc: '../../../app/resources/images/product-images/cream-angel.jpg',
-            color: '#B2A18D'
+            'imgSrc': '../../../app/resources/images/product-images/cream-angel.jpg',
+            'name': 'Turquoise Cream',
+            'color': '#B2A18D'
           }
         ],
       },
 
       {
-        'name': 'Golden Crescent',
         'type': 'Bracelet',
         'mainColor': 'Blue',
         'baseColor': 'bronze',
@@ -62,12 +62,12 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/golden-crescent.jpg',
+            'name': 'Golden Crescent',
             'color': ''
           }
         ],
       },
       {
-        'name': 'Mars Burning',
         'type': 'Earrings',
         'mainColor': 'Red',
         'baseColor': 'rustic',
@@ -81,13 +81,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/mars-burning.jpg',
+            'name': 'Mars Burning',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Simpearl',
         'type': 'Earrings',
         'mainColor': 'Others',
         'baseColor': 'metallic',
@@ -101,13 +101,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/simpearl.jpg',
+            'name': 'Simpearl',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Deep Blue Fall',
         'type': 'Earrings',
         'mainColor': 'Others',
         'baseColor': 'sliver',
@@ -121,13 +121,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/deep-blue-fall.jpg',
+            'name': 'Deep Blue Fall',
             'color': ''
           }
         ],
 
       },
       {
-        'name': 'Black Diamond',
         'type': 'Earrings',
         'mainColor': 'Others',
         'baseColor': 'golden',
@@ -141,13 +141,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/black-diamond.jpg',
+            'name': 'Black Diamond',
             'color': ''
           }
         ],
 
       },
       {
-        'name': 'Elegant Pearl',
         'type': 'Earrings',
         'mainColor': 'Others',
         'baseColor': 'rustic',
@@ -161,13 +161,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/elegant-pearl.jpg',
+            'name': 'Elegant Pearl',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Green Eyed Bird',
         'type': 'Earrings',
         'mainColor': 'Others',
         'baseColor': 'metallic',
@@ -181,13 +181,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/green-eyed-bird.jpg',
+            'name': 'Green Eyed Bird',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Two Sun',
         'type': 'Earring',
         'mainColor': 'Others',
         'baseColor': 'golden',
@@ -201,13 +201,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/two-sun.jpg',
+            'name': 'Two Sun',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Emerald Splash',
         'type': 'Earring',
         'mainColor': 'Others',
         'baseColor': 'sliver',
@@ -221,13 +221,13 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/emerald-splash.jpg',
+            'name': 'Emerald Splash',
             'color': ''
           }
         ],
       },
 
       {
-        'name': 'Gothic Black',
         'type': 'Earring',
         'mainColor': 'Black ',
         'baseColor': '',
@@ -241,6 +241,7 @@ class ProddisplayController {
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/gothic-black.jpg',
+            'name': 'Gothic Black',
             'color': ''
           }
         ],
