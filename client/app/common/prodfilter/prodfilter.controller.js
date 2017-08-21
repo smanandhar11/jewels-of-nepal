@@ -34,53 +34,26 @@ class ProdfilterController {
       '500-1000',
       '1000 and more'
     ];
-    //setting all resp. ng-model to null
-    this.colorModel = null;
-    this.typeModel = null;
-    this.priceModel = null;
-    this.baseColorModel = null;
 
     //instantiating colorSwitch
     this.advanceMode = false;
   }
 
   // storing all md-Selected in a var
-  colorSelect(value) {
-    this.colorSelected = value;
-  }
-
-  baseColorSelect(value) {
-    this.baseColorSelected = value;
-  }
-
-  typeSelect(type) {
-    this.typeSelected = type;
-  }
-
-  priceSelect(price) {
-    this.priceSelected = price;
+  select(name, value) {
+    this.changeValue({
+      name,
+      value
+      // value: undefined //value is not being defined in the parameter, where's it coming from
+    });
   }
 
   //onclick: reset value to null
-  resetColor() {
-    this.colorSelected = '';
-    this.colorModel = null;
-  }
-
-  resetBaseColor() {
-    this.baseColorSelected = '';
-    console.log('>>',this.baseColorModel);
-    this.baseColorModel = null;
-  }
-
-  resetType() {
-    this.typeSelected = '';
-    this.typeModel = null;
-  }
-
-  resetPrice() {
-    this.priceSelected = '';
-    this.priceModel = null;
+  reset(name) {
+    this.changeValue({
+      name,
+      value: undefined
+    });
   }
 
   switchCtrl() {

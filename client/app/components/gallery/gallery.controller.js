@@ -1,6 +1,9 @@
 class GalleryController {
   constructor() {
-    this.name = 'gallery';
+
+  }
+  changeValue(name, value) {
+    this[name] = value;
   }
 }
 

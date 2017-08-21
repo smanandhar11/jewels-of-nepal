@@ -2,14 +2,18 @@
 <main>
   <div class="main-gallery-container">
     <div class="filter-container">
-      <prodfilter color-selected="$ctrl.colorValue"
-                  price-selected="$ctrl.priceValue"
-                  type-selected="$ctrl.typeValue"
-                  base-color-selected="$ctrl.baseColorValue">
+      <prodfilter change-value="$ctrl.changeValue(name, value)"
+                  color-value="$ctrl.colorValue"
+                  price-value="$ctrl.priceValue"
+                  type-value="$ctrl.typeValue"
+                  base-color-value="$ctrl.baseColorValue">
       </prodfilter>
     </div>
     <div class="gallery-section">
-      <proddisplay></proddisplay>
+      <proddisplay color-value="$ctrl.colorValue"
+                   price-value="$ctrl.priceValue"
+                   type-value="$ctrl.typeValue"
+                   base-color-value="$ctrl.baseColorValue"></proddisplay>
     </div>
   </div>
 </main>

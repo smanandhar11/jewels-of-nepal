@@ -4,10 +4,11 @@ import './prodfilter.scss';
 
 let prodfilterComponent = {
   bindings: {
-    colorSelected:'=',
-    typeSelected: '=',
-    priceSelected: '=',
-    baseColorSelected: '='
+    changeValue: '&',
+    colorValue:'<',
+    typeValue: '<',
+    priceValue: '<',
+    baseColorValue: '<'
   },
   template,
   controller
