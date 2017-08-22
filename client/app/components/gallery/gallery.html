@@ -1,8 +1,9 @@
 <navbar></navbar>
 <main>
-  <div class="main-gallery-container" ng-class="{'disp-adjust': $ctrl.showMobFilter}">
-    <div class="filter-container">
+  <div class="main-gallery-container" ng-class="{'adjust-container': $ctrl.showMobFilter}">
+    <div class="filter-container" ng-class="{'disp-adjust': $ctrl.showMobFilter}">
       <prodfilter change-value="$ctrl.changeValue(name, value)"
+                  menu-click="$ctrl.menuClick()"
                   color-value="$ctrl.colorValue"
                   price-value="$ctrl.priceValue"
                   type-value="$ctrl.typeValue"
