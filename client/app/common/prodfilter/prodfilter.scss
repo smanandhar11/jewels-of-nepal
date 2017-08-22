@@ -2,91 +2,109 @@
 
 #sujan {
   .prodfilter {
-    display: flex;
-    flex-direction: column;
 
-    //todo: resolve !important
-    md-input-container {
-      .accent-btn-ed {
-        background-color:#ff5252 ;
-        position: absolute;
-        left: -34px;
-        top: 0;
+    .filter-desk {
+      display: flex;
+      flex-direction: column;
+      //todo: resolve !important
+      md-input-container {
+        .accent-btn-ed {
+          background-color: #ff5252;
+          position: absolute;
+          left: -34px;
+          top: 0;
+          opacity: .6;
+          min-width: 24px !important;
+          max-width: 24px !important;
+          min-height: 25px !important;
+          max-height: 25px !important;
+          border-radius: 15px;
+
+          &:hover {
+            opacity: 1;
+          }
+          .fa.fa-times {
+            position: relative;
+            bottom: 5px;
+          }
+        }
+        &.pri-clr-container {
+          width: 100%;
+        }
+        &.small-width {
+          width: 43%;
+          margin-right: 25px;
+        }
+        &.sec-clr-container {
+          width: 43%;
+        }
+        &.type-input {
+          margin-top: 5px;
+        }
+      }
+
+      //todo: move to utilities
+      .accent-btn {
+        background: $accentColor;
+        color: white;
         opacity: .6;
-        min-width: 24px!important;
-        max-width: 24px!important;
-        min-height: 25px !important;
-        max-height: 25px !important;
-        border-radius: 15px;
 
         &:hover {
           opacity: 1;
         }
-        .fa.fa-times {
-          position: relative;
-          bottom: 5px;
-        }
       }
-      &.pri-clr-container{
-        width: 100%;
-      }
-      &.small-width {
-        width: 43%;
-        margin-right: 25px;
-      }
-      &.sec-clr-container {
-        width: 43%;
-      }
-      &.type-input {
-        margin-top: 5px;
-      }
-    }
-
-    //todo: move to utilities
-    .accent-btn {
-      background: $accentColor;
-      color: white;
-      opacity: .6;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-    .main-input-container {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: column;
-      .color-input-container {
+      .main-input-container {
         display: flex;
         flex-wrap: nowrap;
+        flex-direction: column;
+        .color-input-container {
+          display: flex;
+          flex-wrap: nowrap;
 
-        md-input-container {
-          margin-bottom: 0;
+          md-input-container {
+            margin-bottom: 0;
+          }
         }
-      }
-      .adv-switch-container {
-        display: flex;
-        justify-content: space-between;
+        .adv-switch-container {
+          display: flex;
+          justify-content: space-between;
 
-        .switch-info {
-          color: $textShadow;
-          position: relative;
-          top: 7px;
-        }
-        .adv-color {
-          color: $primaryColor;
-          font-weight: bold;
-        }
+          .switch-info {
+            color: $textShadow;
+            position: relative;
+            top: 7px;
+          }
+          .adv-color {
+            color: $primaryColor;
+            font-weight: bold;
+          }
 
-        md-switch {
-          margin:0;
+          md-switch {
+            margin: 0;
 
+          }
         }
       }
     }
-
+    .display-on {
+      display: flex !important;
+    }
+    .filter-mobile {
+      display: none;
+      .fa-bars {
+        font-size: 20px;
+        color: $primaryColor;
+        cursor: pointer;
+        outline: none;
+      }
+    }
     @media (max-width: 485px) {
-
+      .filter-desk {
+        display: none;
+      }
+      .filter-mobile {
+        display: block;
+      }
     }
   }
 }

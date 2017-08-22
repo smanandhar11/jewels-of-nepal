@@ -4,6 +4,7 @@ import './prodfilter.scss';
 
 let prodfilterComponent = {
   bindings: {
+    menuClick:'&',
     changeValue: '&',
     colorValue:'<',
     typeValue: '<',

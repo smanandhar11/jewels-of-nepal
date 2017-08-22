@@ -37,6 +37,8 @@ class ProdfilterController {
 
     //instantiating colorSwitch
     this.advanceMode = false;
+    //instantiating mobFilter
+
   }
 
   // storing all md-Selected in a var
@@ -59,6 +61,12 @@ class ProdfilterController {
   switchCtrl() {
     this.advanceMode = !this.advanceMode;
   }
+
+  barClick() {
+    console.log('helllo', this.menuClick());
+    this.menuClick();
+  }
+
 
 }
 

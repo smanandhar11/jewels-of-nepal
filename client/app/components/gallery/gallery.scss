@@ -1,23 +1,23 @@
-
+@import '../../styles/variables';
 
 #sujan {
+  .disp-adjust {
+    flex-direction: column;  
+  }
   .main-gallery-container {
     display: flex;
 
     .filter-container {
-      //height:200px;
       flex: 1;
       padding: 10px 30px;
     }
     .gallery-section {
-      //height: 200px;
       flex: 4;
-
     }
-  }
-  @media (max-width: 485px) {
-    .filter-container {
-      display: none;
+    @media (max-width: $mobile) {
+      .filter-container {
+        position: absolute;
+      }
     }
   }
 }

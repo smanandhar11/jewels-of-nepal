@@ -1,6 +1,6 @@
 <navbar></navbar>
 <main>
-  <div class="main-gallery-container">
+  <div class="main-gallery-container" ng-class="{'disp-adjust': $ctrl.showMobFilter}">
     <div class="filter-container">
       <prodfilter change-value="$ctrl.changeValue(name, value)"
                   color-value="$ctrl.colorValue"
