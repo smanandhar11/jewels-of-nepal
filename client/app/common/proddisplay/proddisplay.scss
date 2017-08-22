@@ -19,9 +19,10 @@
         cursor: pointer;
         margin: 20px 30px;
         outline: none;
+        transform: scale(0.9);
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1);
           transition: 1.2s;
           box-shadow: 3px 3px 8px #8e8e8e;
         }
