@@ -1,14 +1,14 @@
 @import '../../styles/variables';
 
 #sujan {
-  .adjust-container {
+  .main-gallery-container-adjust {
     flex-direction: column;
   }
 
   .main-gallery-container {
     display: flex;
 
-    .disp-adjust {
+    .filter-container-adjust {
       position: static!important;
     }
 

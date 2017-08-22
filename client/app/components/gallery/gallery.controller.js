@@ -9,7 +9,6 @@ class GalleryController {
 
   menuClick() {
     this.showMobFilter = !this.showMobFilter;
-    console.log(this.showMobFilter);
   }
 }
 

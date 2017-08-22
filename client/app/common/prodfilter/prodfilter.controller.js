@@ -1,5 +1,5 @@
 class ProdfilterController {
-  constructor() {
+  constructor($window) {
     'ngInject';
     this.colors = [
       'Red',
@@ -34,6 +34,7 @@ class ProdfilterController {
       '500-1000',
       '1000 and more'
     ];
+    this.$window = $window;
 
     //instantiating colorSwitch
     this.advanceMode = false;
@@ -48,7 +49,13 @@ class ProdfilterController {
       value
       // value: undefined //value is not being defined in the parameter, where's it coming from
     });
-  }
+    this.showMobFilter = !this.showMobFilter;
+    if(this.$window.innerWidth < 485) {
+      //bind fn sending listener to gallery ctrl
+      //to change state
+      this.menuClick();
+    }
+   }
 
   //onclick: reset value to null
   reset(name) {
@@ -63,11 +70,12 @@ class ProdfilterController {
   }
 
   barClick() {
-    // console.log('helllo', this.menuClick());
+    //bind fn sending listener to gallery ctrl
+    // change state
     this.menuClick();
+
     this.showMobFilter = !this.showMobFilter;
   }
-
 
 }
 
