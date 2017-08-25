@@ -1,0 +1,13 @@
+.round-btn {
+  background-color: #ff5252;
+  opacity: .6;
+  min-width: 24px;
+  max-width: 24px;
+  min-height: 25px;
+  max-height: 25px;
+  border-radius: 15px;
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,10 +1,11 @@
 <div class="prodfilter">
   <div class="filter-mobile">
-    <!--filter-mobile-menu-->
 
+    <!--filter-mobile-menu-->
     <i class="fa fa-bars pointed" ng-click="$ctrl.barClick()"></i>
     <!--value indicators-->
-    <div class="value-indicator" ng-if="$ctrl.colorValue || $ctrl.baseColorValue || $ctrl.typeValue || $ctrl.priceValue">
+    <div class="value-indicator"
+         ng-if="$ctrl.colorValue || $ctrl.baseColorValue || $ctrl.typeValue || $ctrl.priceValue">
       <!--color indicator-->
       <div class="md-chip-template" ng-if="$ctrl.colorValue">
         <strong>{{$ctrl.colorValue}}</strong>
@@ -29,8 +30,21 @@
         <em>(price range)</em>
         <i class="fa fa-times pointed" ng-click="$ctrl.reset('priceValue')"></i>
       </div>
-
     </div>
+    <!--reset all btn mobile-->
+    <md-button class="md-raised md-warn md-button md-ink-ripple round-btn-menu"
+               ng-if="$ctrl.colorValue && $ctrl.typeValue ||
+                    $ctrl.typeValue && $ctrl.priceValue ||
+                    $ctrl.priceValue && $ctrl.colorValue ||
+                    $ctrl.colorValue && $ctrl.baseColorValue ||
+                    $ctrl.typeValue && $ctrl.baseColorValue ||
+                    $ctrl.priceValue && $ctrl.baseColorValue"
+               ng-click="$ctrl.reset('colorValue');
+                       $ctrl.reset('typeValue');
+                       $ctrl.reset('priceValue');
+                       $ctrl.reset('baseColorValue')">
+      <i class="fa fa-times"></i>
+    </md-button>
   </div>
   <!--Colors-->
   <div class="filter-desk" ng-class="{'display-on':$ctrl.showMobFilter}">
@@ -52,7 +66,7 @@
             </md-option>
           </md-select>
           <md-button ng-if="$ctrl.colorValue" ng-click="$ctrl.reset('colorValue')"
-                     class="md-raised md-warn md-button md-ink-ripple round-btn">
+                     class="md-raised md-warn md-button md-ink-ripple round-btn-input">
             <i class="fa fa-times"></i>
           </md-button>
 
@@ -72,7 +86,7 @@
             </md-option>
           </md-select>
           <md-button ng-if="$ctrl.baseColorValue" ng-click="$ctrl.reset('baseColorValue')"
-                     class="md-raised md-warn md-button md-ink-ripple round-btn">
+                     class="md-raised md-warn md-button md-ink-ripple round-btn-input">
             <i class="fa fa-times"></i>
           </md-button>
         </md-input-container>
@@ -100,7 +114,7 @@
         </md-option>
       </md-select>
       <md-button ng-if="$ctrl.typeValue" ng-click="$ctrl.reset('typeValue')"
-                 class="md-raised md-warn md-button md-ink-ripple round-btn">
+                 class="md-raised md-warn md-button md-ink-ripple round-btn-input">
 
         <i class="fa fa-times"></i>
       </md-button>
@@ -117,7 +131,7 @@
         </md-option>
       </md-select>
       <md-button ng-if="$ctrl.priceValue" ng-click="$ctrl.reset('priceValue')"
-                 class="md-raised md-warn md-button md-ink-ripple round-btn">
+                 class="md-raised md-warn md-button md-ink-ripple round-btn-input">
         <i class="fa fa-times"></i>
       </md-button>
     </md-input-container>
@@ -127,7 +141,10 @@
     <md-button class="md-raised accent-btn"
                ng-if="$ctrl.colorValue && $ctrl.typeValue ||
                     $ctrl.typeValue && $ctrl.priceValue ||
-                    $ctrl.priceValue && $ctrl.colorValue"
+                    $ctrl.priceValue && $ctrl.colorValue ||
+                    $ctrl.colorValue && $ctrl.baseColorValue ||
+                    $ctrl.typeValue && $ctrl.baseColorValue ||
+                    $ctrl.priceValue && $ctrl.baseColorValue"
                ng-click="$ctrl.reset('colorValue');
                        $ctrl.reset('typeValue');
                        $ctrl.reset('priceValue');
@@ -135,5 +152,4 @@
       Reset All
     </md-button>
   </div>
-
 </div>
