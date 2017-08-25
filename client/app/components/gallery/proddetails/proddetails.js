@@ -9,7 +9,7 @@ let proddetailsModule = angular.module('proddetails', [
   "ngInject";
   $stateProvider
     .state('proddetails', {
-      url:'/gallery/prod-details',
+      url:'/gallery/prod-details/:id',
       component:'proddetails'
     });
 
