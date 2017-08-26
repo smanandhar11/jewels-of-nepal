@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "type": "Necklace",
+  "mainColor": "blue",
+  "baseColor": "golden",
+  "priceRange": "100-500",
+  "price": 250,
+  "bgPosition": "bottom",
+  "bgColor": "",
+  "primeColor": "",
+  "activeOption": 0,
+  "option": [
+    {
+      "imgSrc": "../../../app/resources/images/product-images/saphire-fall.jpg",
+      "name": "Blue Dream",
+      "color": ""
+    }
+  ]
+}
+
+

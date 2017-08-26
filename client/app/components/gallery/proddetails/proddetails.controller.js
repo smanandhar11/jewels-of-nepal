@@ -1,3 +1,5 @@
+
+
 class ProddetailsController {
   constructor($http, $stateParams) {
     'ngInject';
@@ -5,9 +7,11 @@ class ProddetailsController {
     this.$stateParams= $stateParams;
   }
   $onInit() {
-    this.$http.get('../../../proddisplay/proddisplay.controller.js').success( function(data){
-      this.product = data[$routeParam.id];
-    });
+    console.log('Initilizating');
+    doWork();
+  }
+  doWork() {
+    console.log('working');
   }
 
 }
