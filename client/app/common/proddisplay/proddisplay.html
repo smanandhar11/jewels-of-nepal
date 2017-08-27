@@ -1,9 +1,14 @@
 <div class="prod-display">
+  <!--<h3 ng-show="">There are no results</h3>-->
+  <div ng-if="results.length == 0">
+    <span>No results found</span>
+    <p class="pointed" ng-click="reset('colorValue')">Reset Filter</p>
+  </div>
   <div class="repeater"
        ng-repeat="product in $ctrl.products | filter:$ctrl.galleryComp.colorValue
                                             | filter:$ctrl.galleryComp.typeValue
                                             | filter:$ctrl.galleryComp.priceValue
-                                            | filter:$ctrl.galleryComp.baseColorValue">
+                                            | filter:$ctrl.galleryComp.baseColorValue as results">
     <div class="circle">
       <div class="prod-image" style="background: url({{product.options[product.activeOption].imgSrc}});
                 width: 100%;
@@ -23,5 +28,6 @@
            ng-click="$ctrl.switchColor(product, $index)"
            style="background: {{option.color}}"></div>
     </div>
+
   </div>
 </div>
