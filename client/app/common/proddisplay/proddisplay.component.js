@@ -4,10 +4,10 @@ import './proddisplay.scss';
 
 let proddisplayComponent = {
   bindings: {
-
-  },
-  require: {
-    galleryComp:'^gallery'
+    colorValue:'<',
+    typeValue: '<',
+    priceValue: '<',
+    baseColorValue: '<'
   },
   template,
   controller

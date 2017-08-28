@@ -1,9 +1,9 @@
 <div class="prod-display">
   <div class="repeater"
-       ng-repeat="product in $ctrl.products | filter:$ctrl.galleryComp.colorValue
-                                            | filter:$ctrl.galleryComp.typeValue
-                                            | filter:$ctrl.galleryComp.priceValue
-                                            | filter:$ctrl.galleryComp.baseColorValue">
+       ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
+                                            | filter:$ctrl.typeValue
+                                            | filter:$ctrl.priceValue
+                                            | filter:$ctrl.baseColorValue">
     <div class="circle">
       <div class="prod-image" style="background: url({{product.options[product.activeOption].imgSrc}});
                 width: 100%;
