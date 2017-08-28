@@ -1,9 +1,13 @@
 <div class="prod-display">
+  <div class="no-results" ng-if="prodFilterResults.length == 0">
+    <span>No results found</span>
+    <p><a class="pointed">Reset filter</a> to try a new search</p>
+  </div>
   <div class="repeater"
        ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue
                                             | filter:$ctrl.priceValue
-                                            | filter:$ctrl.baseColorValue">
+                                            | filter:$ctrl.baseColorValue as prodFilterResults">
     <div class="circle">
       <div class="prod-image" style="background: url({{product.options[product.activeOption].imgSrc}});
                 width: 100%;
