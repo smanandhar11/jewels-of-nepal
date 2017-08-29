@@ -1,8 +1,8 @@
+<div class="no-results" ng-if="prodFilterResults.length == 0">
+  <span>No results found</span>
+  <p><a class="pointed"><i class="fa fa-refresh"></i> Reset filter </a> to try a new search</p>
+</div>
 <div class="prod-display">
-  <div class="no-results" ng-if="prodFilterResults.length == 0">
-    <span>No results found</span>
-    <p><a class="pointed">Reset filter</a> to try a new search</p>
-  </div>
   <div class="repeater"
        ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue

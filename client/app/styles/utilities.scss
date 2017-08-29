@@ -4,5 +4,8 @@ a:hover {
 .pointed {
   cursor: pointer;
   outline: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
