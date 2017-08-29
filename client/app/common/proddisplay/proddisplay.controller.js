@@ -247,29 +247,10 @@ class ProddisplayController {
         ],
       }
     ];
-    this.intProduct = {
-      name: '',
-      type: '',
-      price: '',
-      bgColor: '',
-      primeColor: '',
-      imgSrc: '',
-    };
     this.$state = $state;
-
-
   }
 
   prodSelect(product) {
-    //defining interested products info
-    //for prod-details page
-    this.intProduct.name = product.name;
-    this.intProduct.type = product.type;
-    this.intProduct.price = product.price;
-    this.intProduct.bgColor = product.bgColor;
-    this.intProduct.primeColor = product.primeColor;
-    this.intProduct.imgSrc = product.imgSrc;
-    console.log(this.intProduct);
     this.$state.go('proddetails');
   }
 
