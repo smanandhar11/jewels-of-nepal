@@ -1,5 +1,5 @@
 class ProddisplayController {
-  constructor($state) {
+  constructor($state, $firebaseObject) {
     'ngInject';
     this.products = [
       {
@@ -248,6 +248,16 @@ class ProddisplayController {
       }
     ];
     this.$state = $state;
+    this.$firebaseObject = $firebaseObject;
+
+
+    const rootRef = firebase.database().ref().child('jewels-of-nepal');
+    const ref = rootRef.child('products');
+    this.prods = $firebaseObject(ref);
+  }
+
+  $onInit() {
+
   }
 
   prodSelect(product) {

@@ -3,6 +3,7 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
+import angularFire from 'angularfire';
 import ngMaterial from 'angular-material';
 import ngAnimate from 'angular-animate';
 import 'normalize.css';
@@ -15,6 +16,7 @@ angular.module('app', [
   Components,
   ngMaterial,
   ngAnimate,
+  angularFire
 ])
   .config(($locationProvider,$mdThemingProvider ) => {
     "ngInject";
