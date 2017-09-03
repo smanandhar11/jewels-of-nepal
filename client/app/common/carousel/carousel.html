@@ -1,8 +1,7 @@
 <div class="carousel">
-  <p>hello</p>
   <div class="inner" ng-repeat="prod in $ctrl.caroProds">
     <div ng-if="prod.activeOption === $index" class="img-container" ng-repeat="option in prod.options track by $index">
-      <div  class="caro-image" style="background: url({{option.imgSrc}});
+      <div class="caro-image" style="background: url({{option.imgSrc}});
                 width: 100%;
                 height: 100%;
                 background-repeat: no-repeat;
@@ -11,11 +10,8 @@
                background-position: center;">
         <h3>{{option.name}}</h3>
       </div>
-
-
-  </div>
+    </div>
     <md-button ng-click="$ctrl.prev(prod)">Prev</md-button>
     <md-button ng-click="$ctrl.next(prod)">Next</md-button>
-
   </div>
 </div>

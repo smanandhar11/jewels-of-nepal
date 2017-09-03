@@ -27,20 +27,20 @@ class CarouselController {
         ],
       },
     ];
-    this.noCaroProds = 4;
   }
 
   next(x) {
+    let noOfProds = x.options.length -1;
     x.activeOption++;
-    if(x.activeOption > this.noCaroProds) {
+    if(x.activeOption > noOfProds) {
       x.activeOption = 0;
     }
   }
   prev(x) {
+    let noOfProds = x.options.length -1;
     x.activeOption--;
     if(x.activeOption < 0) {
-
-      x.activeOption = 4;
+      x.activeOption = noOfProds;
     }
   }
 }
