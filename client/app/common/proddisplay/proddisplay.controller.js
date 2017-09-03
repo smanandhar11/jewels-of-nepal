@@ -256,6 +256,7 @@ class ProddisplayController {
 
   switchColor(product, index) {
     product.activeOption = index;
+    console.log(product);
   }
 }
 

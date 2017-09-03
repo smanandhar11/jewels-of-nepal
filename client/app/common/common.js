@@ -1,5 +1,6 @@
 import angular from 'angular';
 import Billboard from './billboard/billboard';
+import Carousel from './carousel/carousel';
 import Footer from './footer/footer';
 import Header from './header/header';
 import Hero from './hero/hero';
@@ -11,6 +12,7 @@ import Wrapper from './wrapper/wrapper';
 
 let commonModule = angular.module('app.common', [
   Billboard,
+  Carousel,
   Footer,
   Header,
   Hero,
