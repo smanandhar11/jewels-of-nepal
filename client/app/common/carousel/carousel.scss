@@ -1,11 +1,69 @@
+@import "../../styles/app-default";
 
 #sujan {
   .carousel {
     .inner {
+      display: flex;
+      justify-content: center;
       .img-container {
-        height: 500px;
-        width: 700px;
+        padding-bottom: 35px;
+        display: flex;
+
+        .prev-btn {
+          align-self: center;
+          position: absolute;
+        }
+        .nxt-btn {
+          align-self: center;
+          position: relative;
+          right: 25px;
+        }
+
+        .caro-image {
+          width: 100%;
+          min-height: 450px;
+          max-height: 450px;
+          border-radius: 3px;
+          box-shadow: 8px 8px 13px #afaeae;
+          transition: transform 2s ease-in;
+        }
       }
+      .caro-text {
+        width: 20%;
+        position: absolute;
+        right: 240px;
+        color: #fff;
+        padding-top: 25px;
+
+        .prod-description {
+          //todo: find another way to lower the width: description
+          width: 197px;
+        }
+
+        p {
+          font-size: 11px;
+        }
+        h3 {
+          font-size: 15px;
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+      }
+      .md-button.md-raised {
+        margin: 0;
+        font-size: 10px;
+        font-weight: bold;
+        min-height: 0;
+        min-width: 173px;
+        line-height: 27px;
+      }
+
+      i {
+        color: #666666;
+        font-size: 35px;
+        text-shadow: 1px 1px 1px #fff;
+      }
+
     }
   }
 }

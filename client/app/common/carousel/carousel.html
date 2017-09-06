@@ -1,17 +1,31 @@
 <div class="carousel">
   <div class="inner" ng-repeat="prod in $ctrl.caroProds">
-    <div ng-if="prod.activeOption === $index" class="img-container" ng-repeat="option in prod.options track by $index">
-      <div class="caro-image" style="background: url({{option.imgSrc}});
-                width: 100%;
-                height: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
+    <!--Img Cont-->
+    <div ng-if="prod.activeOption === $index"
+         class="img-container"
+         ng-repeat="option in prod.options track by $index">
+      <!--Previous Btn-->
+      <a class="pointed prev-btn"
+         ng-click="$ctrl.prev(prod)">
+        <i class="fa fa-angle-double-left"></i>
+      </a>
+      <!--Carousel Img-->
+      <img class="caro-image" src="{{option.imgSrc}}" alt=""/>
 
-               background-position: center;">
-        <h3>{{option.name}}</h3>
+      <!--Carousel Txt-->
+      <div class="caro-text">
+        <h3 class="prod-name">{{prod.options[prod.activeOption].name}}</h3>
+        <p class="prod-description">Health is the greatest gift, contentment the greatest wealth, faithfulness the best
+          relationship.
+          Keep feeding your happy side as much as you can.</p>
+        <md-button class="md-raised">View Product</md-button>
       </div>
+
+      <!--Next Btn-->
+      <a class="pointed nxt-btn">
+        <i class="fa fa-angle-double-right pointed" ng-click="$ctrl.next(prod)" ng-mouseover="$ctrl.nextMouseOver()"
+           ng-mouseleave="ctrl.nextMouseLeave()"></i>
+      </a>
     </div>
-    <md-button ng-click="$ctrl.prev(prod)">Prev</md-button>
-    <md-button ng-click="$ctrl.next(prod)">Next</md-button>
   </div>
 </div>
