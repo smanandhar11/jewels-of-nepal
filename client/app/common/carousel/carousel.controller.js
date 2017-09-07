@@ -27,14 +27,6 @@ class CarouselController {
         ],
       },
     ];
-    this.showToggler = false;
-    this.toggleCarousel = false;
-  }
-
-  $onInit() {
-    if(this.toggleCarousel === true) {
-      this.next(x);
-    }
   }
 
   next(x) {
@@ -43,7 +35,6 @@ class CarouselController {
     if (x.activeOption > noOfProds) {
       x.activeOption = 0;
     }
-
   }
 
   prev(x) {
@@ -52,21 +43,6 @@ class CarouselController {
     if (x.activeOption < 0) {
       x.activeOption = noOfProds;
     }
-  }
-
-  nextMouseOver() {
-    this.showToggler = true;
-    console.log(this.showToggler);
-  }
-
-  nextMouseLeave() {
-
-    console.log('hello');
-  }
-  caroToggle() {
-    console.log('started');
-    this.toggleCarousel = true;
-    console.log(this.toggleCarousel);
   }
 }
 

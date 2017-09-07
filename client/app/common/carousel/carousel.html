@@ -4,13 +4,15 @@
     <div ng-if="prod.activeOption === $index"
          class="img-container"
          ng-repeat="option in prod.options track by $index">
+
       <!--Previous Btn-->
       <a class="pointed prev-btn"
          ng-click="$ctrl.prev(prod)">
         <i class="fa fa-angle-double-left"></i>
       </a>
+
       <!--Carousel Img-->
-      <img class="caro-image" src="{{option.imgSrc}}" alt=""/>
+      <img class="caro-image" src="{{option.imgSrc}}"/>
 
       <!--Carousel Txt-->
       <div class="caro-text">
@@ -23,8 +25,9 @@
 
       <!--Next Btn-->
       <a class="pointed nxt-btn">
-        <i class="fa fa-angle-double-right pointed" ng-click="$ctrl.next(prod)" ng-mouseover="$ctrl.nextMouseOver()"
-           ng-mouseleave="ctrl.nextMouseLeave()"></i>
+        <i class="fa fa-angle-double-right pointed"
+           ng-click="$ctrl.next(prod)">
+        </i>
       </a>
     </div>
   </div>
