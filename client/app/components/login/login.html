@@ -15,11 +15,13 @@
           <md-input-container>
             <label>Password</label>
             <input type="password"
-                   ng-model="$ctrl.username"/>
+                   ng-model="$ctrl.password"/>
           </md-input-container>
           <!--</md-content>-->
 
-          <md-button class="md-raised">Submit</md-button>
+          <md-button class="md-raised"
+                     ng-click="$ctrl.signIn()">Submit
+          </md-button>
         </div>
       </form>
     </div>
