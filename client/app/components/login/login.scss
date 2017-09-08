@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.login {
+  display: flex;
+  justify-content: center;
+  font-family: Muli, sans-serif;
+
+  .center {
+    width: 229px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .fieldseter {
+    display: flex;
+    flex-direction: column;
+
+    md-input-container {
+      margin: 0;
+
+      &.md-input-focused input {
+        border-bottom-width: 1px;
+        border-color: $primaryColor;
+      }
+      &.md-input-focused label {
+        color: $primaryColor;
+      }
+    }
+  }
+}
