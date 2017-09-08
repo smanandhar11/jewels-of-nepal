@@ -1,18 +1,21 @@
 <div class="rapper lg">
   <div class="login">
     <div class="center">
+      <img src="../../../app/resources/images/brand-logo.png" alt="">
       <h2>Please log in</h2>
       <form action="">
         <div class="fieldseter" ng-disabled="$ctrl.isSubmitting">
           <!--<md-content>-->
           <md-input-container>
             <label>Username</label>
-            <input type="text">
+            <input type="text"
+                   ng-model="$ctrl.username"/>
           </md-input-container>
 
           <md-input-container>
             <label>Password</label>
-            <input type="password">
+            <input type="password"
+                   ng-model="$ctrl.username"/>
           </md-input-container>
           <!--</md-content>-->
 

@@ -1,12 +1,17 @@
 @import '../../styles/variables';
 
 .login {
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   font-family: Muli, sans-serif;
 
   .center {
-    width: 229px;
+    width: 300px;
+
+    img {
+      margin-left: 88px;
+    }
 
     h2 {
       text-align: center;
@@ -19,6 +24,13 @@
 
     md-input-container {
       margin: 0;
+
+      label {
+        font-size: 18px;
+      }
+      input {
+        font-size: 15px;
+      }
 
       &.md-input-focused input {
         border-bottom-width: 1px;
