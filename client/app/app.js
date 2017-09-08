@@ -5,7 +5,7 @@ import Components from './components/components';
 import AppComponent from './app.component';
 import ngMaterial from 'angular-material';
 import ngAnimate from 'angular-animate';
-import firebase from 'firebase';
+import anguarFire from 'angularfire';
 import 'normalize.css';
 import 'angular-material/angular-material.css';
 import appTheme from './styles/theme.config';
@@ -16,7 +16,7 @@ angular.module('app', [
   Components,
   ngMaterial,
   ngAnimate,
-  firebase,
+  anguarFire
 ])
   .config(($locationProvider,$mdThemingProvider ) => {
     "ngInject";
