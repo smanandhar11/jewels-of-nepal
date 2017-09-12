@@ -15,6 +15,7 @@ angular.module('app', [
   Components,
   ngMaterial,
   ngAnimate,
+  firebase
 ])
   .config(($locationProvider,$mdThemingProvider ) => {
     "ngInject";
