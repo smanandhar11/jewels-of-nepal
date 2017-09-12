@@ -1,18 +1,19 @@
 
 
 class ProddetailsController {
-  constructor($http, $stateParams) {
+  constructor($firebaseObject) {
     'ngInject';
-    this.$http = $http;
-    this.$stateParams= $stateParams;
+    this.$firebaseObject = $firebaseObject;
   }
   $onInit() {
-    console.log('Initilizating');
-    doWork();
+    const rootRef = firebase.database().ref().child('products');
+    const ref = rootRef.child('blue-dream');
+
+    rootRef.on('value', function (snap) {
+      console.log(snap.val());
+    })
   }
-  doWork() {
-    console.log('working');
-  }
+
 
 }
 
