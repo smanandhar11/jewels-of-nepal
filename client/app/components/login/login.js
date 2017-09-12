@@ -6,8 +6,11 @@ let loginModule = angular.module('login', [
   uiRouter
 ])
 
-  .config(($stateProvider) => {
+  .config(($stateProvider, $urlRouterProvider) => {
     "ngInject";
+
+    $urlRouterProvider.otherwise('/login');
+
     $stateProvider
       .state('login', {
         url: '/login',
