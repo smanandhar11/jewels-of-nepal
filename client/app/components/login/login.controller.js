@@ -5,23 +5,24 @@ class LoginController {
     'ngInject';
     this.$state = $state;
     this.$firebaseAuth = $firebaseAuth;
-    // this.$firebaseArray = $firebaseArray;
-    this.data = 'hello';
+    this.$firebaseObject = $firebaseObject;
+  }
 
+
+
+  $onInit() {
     //firebase
     const rootRef = firebase.database().ref().child('angular');
     const ref = rootRef.child('object');
-    this.object = $firebaseObject(ref);
-  }
+    this.object = this.$firebaseObject(ref);
 
-  $onInit() {
-   // const dbRefGoodies = firebase.database().ref().child('products');
-   // // const dbRefNames = dbRefGoodies.child('name');
-   //
-   //
-   //  dbRefGoodies.on('value', snap => console.log(snap.val()));
-   //
-   //  // dbRefNames.on('value', snap => console.log(snap.val()));
+    // ref.on('value', snap => this.objVal = snap.val());
+    //can also be written as
+    ref.on('value', function(snap) {
+      console.log(snap.val());
+    }, function(err) {
+      console.log(err);
+    })
   }
 
   signIn() {
