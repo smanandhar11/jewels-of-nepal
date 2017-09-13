@@ -12,16 +12,31 @@ class ProddetailsController {
     let self = this;
 
     rootRef.on('value',(snap) =>  {
-      _.forEach(snap.val(), function (valu) {
-        // if(valu.id = self.$stateParams.id) {
-        //   console.log(valu.options.name);
-        // }
-        valu.id = self.$stateParams.id ? console.log(valu.options.name): console.log('false');
-        // console.log('value',valu.id);
-        // console.log('self',self.$stateParams.id);
-      })
+      let fireData = (snap.val()); //setting as fireData to avoid .expression on function
+
+      _.forEach(fireData, function (val) {
+        let stParam = parseInt(self.$stateParams.id); //Converting to Number to evaluate
+        if(val.id === stParam) {
+          self.prodData = val;
+          console.log(self.prodData.options.name);
+        }
+      });
+      this.prodData = self.prodData;
+
+
+
     });
-   /* console.log(this.$stateParams.id);*/
+
+
+
+
+    // rootRef.on('value',(snap) => {
+    //   _.find(snap.val(), function (val) {
+    //     console.log(val.id === 1);
+    //
+    //   })
+    //
+    // })
   }
 
 
