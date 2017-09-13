@@ -1,5 +1,5 @@
 class ProddisplayController {
-  constructor($state) {
+  constructor() {
     'ngInject';
     this.products = [
       {
@@ -247,11 +247,6 @@ class ProddisplayController {
         ],
       }
     ];
-    this.$state = $state;
-  }
-
-  prodSelect(product) {
-    this.$state.go('proddetails');
   }
 
   switchColor(product, index) {
