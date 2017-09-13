@@ -29,11 +29,11 @@ class LoginController {
     let auth = this.$firebaseAuth();
     let username = this.username;
     let password = this.password;
-
+    self = this;
 
     auth.$signInWithEmailAndPassword(username, password).then(function () {
       //this is not being loaded into this function
-      console.log('success log in');
+      self.$state.go('home');
     }).catch(function (err) {
       console.log(err);
     });
