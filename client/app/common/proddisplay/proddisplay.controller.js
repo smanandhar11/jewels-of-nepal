@@ -3,6 +3,7 @@ class ProddisplayController {
     'ngInject';
     this.products = [
       {
+        'id':1,
         'type': 'Necklace',
         'mainColor': 'blue',
         'baseColor': 'golden',
@@ -23,6 +24,7 @@ class ProddisplayController {
       },
       //main trial product
       {
+        'id':2,
         'type': 'Earrings',
         'mainColor': 'Blue',
         'baseColor': 'silver',

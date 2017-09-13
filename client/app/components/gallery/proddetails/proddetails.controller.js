@@ -1,6 +1,5 @@
 class ProddetailsController {
-  constructor() {
-    this.name = 'proddetails';
+  constructor() {this.name = 'proddetails';
   }
 }
 
