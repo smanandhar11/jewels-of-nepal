@@ -5,23 +5,23 @@ class CarouselController {
         activeOption: 0,
         options: [
           {
-            'imgSrc': '../../../app/resources/images/carousel-images/nature1.jpg',
+            'imgSrc': '../../../app/resources/images/carousel-images/nature1.png',
             'name': 'Symmetrically Blissful',
           },
           {
-            'imgSrc': '../../../app/resources/images/carousel-images/nature2.jpg',
+            'imgSrc': '../../../app/resources/images/carousel-images/nature2.png',
             'name': 'Colorful Emotion'
           },
           {
-            'imgSrc': '../../../app/resources/images/carousel-images/nature3.jpg',
+            'imgSrc': '../../../app/resources/images/carousel-images/nature3.png',
             'name': 'Simple Times'
           },
           {
-            'imgSrc': '../../../app/resources/images/carousel-images/nature4.jpg',
+            'imgSrc': '../../../app/resources/images/carousel-images/nature4.png',
             'name': 'Revolutionary'
           },
           {
-            'imgSrc': '../../../app/resources/images/carousel-images/nature5.jpg',
+            'imgSrc': '../../../app/resources/images/carousel-images/nature5.png',
             'name': 'Blue Moon'
           }
         ],

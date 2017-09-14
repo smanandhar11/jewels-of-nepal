@@ -21,20 +21,17 @@
 
         .caro-image {
           width: 100%;
-          min-height: 450px;
-          max-height: 450px;
+          height: 100%;
           border-radius: 3px;
           box-shadow: 8px 8px 13px #afaeae;
         }
-
-        
       }
       .caro-text {
         width: 20%;
         position: absolute;
-        right: 240px;
+        right: 140px;
         color: #fff;
-        padding-top: 25px;
+        align-self: center;
 
         .prod-description {
           //todo: find another way to lower the width: description
