@@ -40,6 +40,9 @@
       &.md-input-focused label {
         color: $primaryColor;
       }
+      md-button {
+        font-weight: bold;
+      }
     }
   }
 }
