@@ -1,3 +1,45 @@
+@import '../../styles/variables';
+
 .login {
-  color: red;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-family: Muli, sans-serif;
+
+  .center {
+    width: 300px;
+
+    img {
+      width: 127px;
+      margin-left: 88px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .fieldseter {
+    display: flex;
+    flex-direction: column;
+
+    md-input-container {
+      margin: 0;
+
+      label {
+        font-size: 18px;
+      }
+      input {
+        font-size: 15px;
+      }
+
+      &.md-input-focused input {
+        border-bottom-width: 1px;
+        border-color: $primaryColor;
+      }
+      &.md-input-focused label {
+        color: $primaryColor;
+      }
+    }
+  }
 }
