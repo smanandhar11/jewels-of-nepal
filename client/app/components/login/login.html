@@ -3,23 +3,41 @@
     <div class="center">
       <img src="../../../app/resources/images/brand-logo.png" alt="">
       <h2>Please sign in</h2>
-      <form action="">
+      <form name="loginForm">
         <div class="fieldseter" ng-disabled="$ctrl.isSubmitting">
           <!--<md-content>-->
           <md-input-container>
-            <label>Username</label>
-            <input type="text"
+            <label>Email</label>
+            <input type="email"
+                   name="email"
+                   required
                    ng-model="$ctrl.username"/>
+            <!--Error Messages-->
+            <div ng-messages="loginForm.email.$error" role="alert">
+              <div ng-message="required">
+                Please enter a valid email
+              </div>
+            </div>
           </md-input-container>
 
           <md-input-container>
             <label>Password</label>
             <input type="password"
+                   name="password"
+                   required
                    ng-model="$ctrl.password"/>
+            <div ng-messages="loginForm.password.$error" role="alert">
+              <div ng-message="required">
+                Please enter a valid password
+              </div>
+            </div>
           </md-input-container>
           <!--</md-content>-->
 
-          <md-button class="md-raised"
+          <md-button class="md-raised sign-in-btn"
+                     md-ink-ripple="rgb(255, 82, 82)"
+                     ng-disabled="loginForm.$invalid"
+                     ng-class="{'btn-disabled': loginForm.$invalid}"
                      ng-click="$ctrl.signIn()">Submit
           </md-button>
         </div>

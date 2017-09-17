@@ -16,7 +16,7 @@ angular.module('app', [
   Components,
   ngMaterial,
   ngAnimate,
-  angularFire
+  angularFire,
 ])
   .config(($locationProvider,$mdThemingProvider ) => {
     "ngInject";
@@ -28,4 +28,34 @@ angular.module('app', [
     appTheme($mdThemingProvider);
   })
 
+  // .run(["$rootScope","$location", function ($rootScope, $location) {
+  //   'debugger';
+  //   $rootScope.$on('$routeChangeStart', function(event, next, current) {
+  //     console.log('event',event);
+  //     console.log(current);
+  //     console.log(next);
+  //   });
+  // }])
+  .run(['$rootScope','$transitions','authFact', function ($rootScope, $transitions, authFact) {
+    $transitions.onStart({}, function (event) {
+      console.log('auth', authFact.authenticated);
+      // console.log($$route.authenticated)
+    })
+    // $trace.enable(1);
+    // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    //   console.log('hi', event, toState);
+    // });
+  }])
+
+  .factory('authFact',[function () {
+    let authfact = {};
+    if(authfact.authenticated === undefined) {
+      authfact.authenticated = false;
+    }
+
+    return authfact;
+  }])
+
   .component('app', AppComponent);
+
+

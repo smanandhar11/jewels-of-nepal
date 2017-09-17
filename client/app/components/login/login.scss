@@ -40,9 +40,13 @@
       &.md-input-focused label {
         color: $primaryColor;
       }
-      md-button {
-        font-weight: bold;
-      }
     }
+    .md-button.sign-in-btn {
+      font-weight: bold;
+    }
+    .md-button.btn-disabled {
+      cursor: not-allowed;
+    }
+
   }
 }

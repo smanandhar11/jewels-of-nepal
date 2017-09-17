@@ -12,7 +12,8 @@ let homeModule = angular.module('home', [
     $stateProvider
       .state('home', {
         url: '/',
-        component: 'home'
+        component: 'home',
+        authenticated: true
       });
   })
 

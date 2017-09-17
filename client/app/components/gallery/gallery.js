@@ -11,7 +11,8 @@ let galleryModule = angular.module('gallery', [
     $stateProvider
       .state('gallery', {
         url: '/gallery',
-        component: 'gallery'
+        component: 'gallery',
+        authenticated: true
       });
   })
 
