@@ -1,5 +1,5 @@
 <!--header-->
-<header>
+<header class="main-header"><!--ng-class="isSticky ? 'sticky': ''"-->
   <div class="header-container">
     <a ui-sref="home" class="header-left" layout="column">
       <img class="brand-logo"
@@ -13,13 +13,11 @@
       <social></social>
     </div>
   </div>
-
-
 </header>
 
 <!--navigation-->
 <nav>
-  <md-toolbar>
+  <md-toolbar class="main-nav">
     <md-tabs class="btn-primary" md-stretch-tabs="always">
       <md-tab ui-sref="home">
         Home
