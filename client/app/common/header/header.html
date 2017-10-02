@@ -1,32 +1,33 @@
-<!--header-->
-<header class="main-header"><!--ng-class="isSticky ? 'sticky': ''"-->
-  <div class="header-container">
-    <a ui-sref="home" class="header-left" layout="column">
-      <img class="brand-logo"
-           src="../../../app/resources/images/brand-logo.png"
-           alt="Jewels of Nepal">
-      <span class="brand-name">Jewels of Nepal</span>
-      <!--<span class="brand-slogan">Keep on shining</span>-->
-    </a>
-    <!--todo: social media section to be continued-->
-    <div class="header-right">
-      <social></social>
+<div class="head">
+  <!--header-->
+  <header class="main-header"><!--ng-class="isSticky ? 'sticky': ''"-->
+    <div class="header-container">
+      <a ui-sref="home" class="header-left" layout="column">
+        <img class="brand-logo"
+             src="../../../app/resources/images/brand-logo.png"
+             alt="Jewels of Nepal">
+        <span class="brand-name">Jewels of Nepal</span>
+        <!--<span class="brand-slogan">Keep on shining</span>-->
+      </a>
+      <!--todo: social media section to be continued-->
+      <div class="header-right">
+        <social></social>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!--navigation-->
-<nav>
-  <md-toolbar class="main-nav">
-    <md-tabs class="btn-primary" md-stretch-tabs="always">
-      <md-tab ui-sref="home">
-        Home
-      </md-tab>
-      <md-tab ui-sref="gallery">
-        Gallery
-      </md-tab>
-    </md-tabs>
-  </md-toolbar>
-</nav>
-
+  <!--navigation-->
+  <nav>
+    <md-toolbar class="main-nav">
+      <md-tabs class="btn-primary" md-stretch-tabs="always">
+        <md-tab ui-sref="home">
+          Home
+        </md-tab>
+        <md-tab ui-sref="gallery">
+          Gallery
+        </md-tab>
+      </md-tabs>
+    </md-toolbar>
+  </nav>
+</div>
 
