@@ -16,13 +16,13 @@ class NavbarController {
       let nav = document.getElementsByClassName('main-nav');
       let $nav = angular.element(nav);
       let $navHeight = $nav.height();
-      let galleryCont = document.getElementsByClassName('head');
-      let $galleryCont = angular.element(galleryCont);
+      let head = document.getElementsByClassName('head');
+      let $head = angular.element(head);
 
       angular.element(this.$window).on('scroll', ()=> {
 
         if(this.$window.scrollY >= $headerHeight) {
-          $galleryCont.css('marginBottom', $navHeight+'px');
+          $head.css('marginBottom', $navHeight+'px');
           $nav.css({
             position:'fixed',
             top:'0',
@@ -33,7 +33,7 @@ class NavbarController {
           });
         } else {
           $nav.css({ position:'static'});
-          $galleryCont.css('marginBottom','0');
+          $head.css('marginBottom','0');
         }
       })
 

@@ -95,11 +95,11 @@ class ProdfilterController {
 
 
       angular.element(this.$window).on('scroll', ()=> {
-        if(this.$window.innerWidth>485 && this.$window.scrollY >= $headNavHeight-15) {
+        if(this.$window.innerWidth>485 && this.$window.scrollY >= $headNavHeight-35) {
           $filterContainer.css({
             position:'fixed',
             top:$navHeight,
-            width:'19%',
+            width:'19.2%',
           })
         } else {
           $filterContainer.css({position:'static', width:'100%'})
