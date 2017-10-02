@@ -5,6 +5,10 @@ class NavbarController {
     this.$window = $window;
   }
   $onInit() {
+    this.setSticky();
+  };
+
+  setSticky() {
     this.$timeout(() => {
       let header = document.getElementsByClassName('main-header');
       let $header = angular.element(header);
@@ -40,8 +44,7 @@ class NavbarController {
       })
 
     }, 100);
-
-  };
+  }
 }
 
 export default NavbarController;
