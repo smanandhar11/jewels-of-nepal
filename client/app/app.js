@@ -11,13 +11,13 @@ import 'angular-material/angular-material.css';
 import appTheme from './styles/theme.config';
 
 angular.module('app', [
-    uiRouter,
-    Common,
-    Components,
-    ngMaterial,
-    ngAnimate,
-    angularFire
-  ])
+  uiRouter,
+  Common,
+  Components,
+  ngMaterial,
+  ngAnimate,
+  angularFire
+])
   .config(($locationProvider, $mdThemingProvider) => {
     "ngInject";
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
