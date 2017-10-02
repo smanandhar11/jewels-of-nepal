@@ -1,5 +1,5 @@
 class ProdfilterController {
-  constructor($window) {
+  constructor($window, $timeout) {
     'ngInject';
     this.colors = [
       'Red',
@@ -10,7 +10,6 @@ class ProdfilterController {
       'Black',
       'Others'
     ];
-
     this.baseColors = [
       'Golden',
       'Silver',
@@ -19,7 +18,6 @@ class ProdfilterController {
       'Rustic',
       'Metallic'
     ];
-
     this.types = [
       'Earrings',
       'Bracelets',
@@ -27,7 +25,6 @@ class ProdfilterController {
       'Sets',
       'Others'
     ];
-
     this.prices = [
       '0-100',
       '100-500',
@@ -35,6 +32,7 @@ class ProdfilterController {
       '1000 and more'
     ];
     this.$window = $window;
+    this.$timeout = $timeout;
 
     //instantiating colorSwitch
     this.advanceMode = false;
@@ -42,6 +40,9 @@ class ProdfilterController {
     this.showMobFilter= false;
   }
 
+  $onInit() {
+    this.stickyFilter();
+  }
   // storing all md-Selected in a var
   select(name, value) {
     this.changeValue({
@@ -75,6 +76,36 @@ class ProdfilterController {
     this.menuClick();
 
     this.showMobFilter = !this.showMobFilter;
+  }
+
+  stickyFilter() {
+    this.$timeout(() => {
+      let header = document.getElementsByClassName('main-header');
+      let $header = angular.element(header);
+      let $headerHeight = $header.height();
+
+      let nav = document.getElementsByClassName('main-nav');
+      let $nav = angular.element(nav);
+      let $navHeight = $nav.height();
+
+      let $headNavHeight = $headerHeight + $navHeight;
+      let filterContainer = document.getElementsByClassName('prodfilter');
+      let $filterContainer = angular.element(filterContainer);
+
+
+
+      angular.element(this.$window).on('scroll', ()=> {
+        if(this.$window.innerWidth>485 && this.$window.scrollY >= $headNavHeight-15) {
+          $filterContainer.css({
+            position:'fixed',
+            top:$navHeight,
+            width:'19%',
+          })
+        } else {
+          $filterContainer.css({position:'static', width:'100%'})
+        }
+      });
+    }, 100);
   }
 
 }

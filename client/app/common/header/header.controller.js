@@ -19,9 +19,6 @@ class NavbarController {
       let galleryCont = document.getElementsByClassName('head');
       let $galleryCont = angular.element(galleryCont);
 
-      let x = $nav.next();
-      console.log(x);
-
       angular.element(this.$window).on('scroll', ()=> {
 
         if(this.$window.scrollY >= $headerHeight) {
@@ -34,10 +31,7 @@ class NavbarController {
             transition:'box-shadow 0.5s ease',
             zIndex:'999999'
           });
-
-
-        }
-        else {
+        } else {
           $nav.css({ position:'static'});
           $galleryCont.css('marginBottom','0');
         }
