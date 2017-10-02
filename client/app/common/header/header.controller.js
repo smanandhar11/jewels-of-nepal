@@ -4,6 +4,7 @@ class NavbarController {
     this.$timeout = $timeout;
     this.$window = $window;
   }
+
   $onInit() {
     this.setSticky();
   };
@@ -19,21 +20,20 @@ class NavbarController {
       let head = document.getElementsByClassName('head');
       let $head = angular.element(head);
 
-      angular.element(this.$window).on('scroll', ()=> {
-
-        if(this.$window.scrollY >= $headerHeight) {
-          $head.css('marginBottom', $navHeight+'px');
+      angular.element(this.$window).on('scroll', () => {
+        if (this.$window.scrollY >= $headerHeight) {
+          $head.css('marginBottom', $navHeight + 'px');
           $nav.css({
-            position:'fixed',
-            top:'0',
-            width:'100%',
-            boxShadow:'0 0 10px 0 rgba(0,0,0,0.7)',
-            transition:'box-shadow 0.5s ease',
-            zIndex:'999999'
+            position: 'fixed',
+            top: '0',
+            width: '100%',
+            boxShadow: '0 0 10px 0 rgba(0,0,0,0.7)',
+            transition: 'box-shadow 0.5s ease',
+            zIndex: '999999'
           });
         } else {
-          $nav.css({ position:'static'});
-          $head.css('marginBottom','0');
+          $nav.css({position: 'static'});
+          $head.css('marginBottom', '0');
         }
       })
 
