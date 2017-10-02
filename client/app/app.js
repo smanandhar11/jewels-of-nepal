@@ -10,8 +10,7 @@ import 'normalize.css';
 import 'angular-material/angular-material.css';
 import appTheme from './styles/theme.config';
 
-angular
-  .module('app', [
+angular.module('app', [
     uiRouter,
     Common,
     Components,
