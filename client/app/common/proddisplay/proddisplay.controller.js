@@ -1,16 +1,15 @@
 class ProddisplayController {
-  constructor() {
+  constructor($firebaseArray, $scope) {
     'ngInject';
     this.products = [
       {
-        'id':1,
+        'id': 1,
         'type': 'Necklace',
         'mainColor': 'blue',
         'baseColor': 'golden',
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '58px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -24,14 +23,13 @@ class ProddisplayController {
       },
       //main trial product
       {
-        'id':2,
+        'id': 2,
         'type': 'Earrings',
         'mainColor': 'Blue',
         'baseColor': 'silver',
         'priceRange': '500-1000',
         'price': 'Rs.250',
         'bgPosition': 'center',
-        'nameSpace': '58px',
         'bgColor': '',
         'primeColor': '#63BBBC', //not sure need this
         activeOption: 0,
@@ -57,7 +55,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'center',
-        'nameSpace': '50px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -76,7 +73,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'center',
-        'nameSpace': '58px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -96,7 +92,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '64px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -116,7 +111,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -136,7 +130,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -156,7 +149,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -176,7 +168,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -196,7 +187,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -216,7 +206,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -236,7 +225,6 @@ class ProddisplayController {
         'priceRange': '100-500',
         'price': 'Rs.250',
         'bgPosition': 'bottom',
-        'nameSpace': '45px',
         'bgColor': '',
         'primeColor': '',
         activeOption: 0,
@@ -249,12 +237,31 @@ class ProddisplayController {
         ],
       }
     ];
+    this.$scope = $scope;
+    this.$firebaseArray = $firebaseArray;
   }
-
 
   switchColor(product, index) {
     product.activeOption = index;
     console.log(product);
+  }
+
+  $onInit() {
+    this.getProducts();
+  }
+
+  getProducts() {
+    const rootRef = firebase.database().ref('products');
+    this.prodData = this.$firebaseArray(rootRef);
+
+
+    this.prodData.$ref().once('value',(snap)=> {
+      angular.forEach(snap.val(), (val) => {
+        this.prodData = val.data;
+
+      })
+    });
+    console.log('<<<',this.prodData);
   }
 }
 

@@ -1,10 +1,12 @@
+<!--No result-->
 <div class="no-results" ng-if="prodFilterResults.length == 0">
   <span>No results found</span>
   <p><a class="pointed"><i class="fa fa-refresh"></i> Reset filter </a> to try a new search</p>
 </div>
+
 <div class="prod-display">
   <div class="repeater"
-       ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
+       ng-repeat="product in $ctrl.fireArr | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue
                                             | filter:$ctrl.priceValue
                                             | filter:$ctrl.baseColorValue as prodFilterResults">
@@ -28,4 +30,8 @@
            style="background: {{option.color}}"></div>
     </div>
   </div>
+</div>
+
+<div class="new-data" ng-repeat="dat in $ctrl.prodData">
+  <span>name :{{dat}}</span>
 </div>
