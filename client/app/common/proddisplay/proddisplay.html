@@ -6,7 +6,7 @@
 
 <div class="prod-display">
   <div class="repeater"
-       ng-repeat="product in $ctrl.fireArr | filter:$ctrl.colorValue
+       ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue
                                             | filter:$ctrl.priceValue
                                             | filter:$ctrl.baseColorValue as prodFilterResults">
