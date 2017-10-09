@@ -6,7 +6,7 @@
 
 <div class="prod-display">
   <div class="repeater"
-       ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
+       ng-repeat="product in $ctrl.arr | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue
                                             | filter:$ctrl.priceValue
                                             | filter:$ctrl.baseColorValue as prodFilterResults">
@@ -35,3 +35,5 @@
 <div class="new-data" ng-repeat="dat in $ctrl.prodData">
   <span>name :{{dat}}</span>
 </div>
+
+<div>Data: {{$ctrl.arr}}</div>

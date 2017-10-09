@@ -252,16 +252,24 @@ class ProddisplayController {
 
   getProducts() {
     const rootRef = firebase.database().ref('products');
-    this.prodData = this.$firebaseArray(rootRef);
+    this.productData = this.$firebaseArray(rootRef);
 
-
-    this.prodData.$ref().once('value',(snap)=> {
-      angular.forEach(snap.val(), (val) => {
-        this.prodData = val.data;
-
-      })
+    this.productData.$ref().once('value', (snap) => {
+      this.arr = [];
+      snap.forEach((data) => {
+        this.arr.push(data.val());
+      });
+      console.log(this.arr);
+      // angular.forEach(snap.val(), (val) => {
+      //   this.prodData = snap.val();
+      //   console.log('>>', snap.length);
+      //
+      //
+      //
+      //   console.log(this.arr);
+      // });
     });
-    console.log('<<<',this.prodData);
+
   }
 }
 
