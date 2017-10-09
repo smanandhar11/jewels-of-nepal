@@ -6,13 +6,13 @@
 
 <div class="prod-display">
   <div class="repeater"
-       ng-repeat="product in $ctrl.products | filter:$ctrl.colorValue
+       ng-repeat="product in $ctrl.productArray | filter:$ctrl.colorValue
                                             | filter:$ctrl.typeValue
                                             | filter:$ctrl.priceValue
                                             | filter:$ctrl.baseColorValue as prodFilterResults">
     <div class="circle">
       <!--image-->
-      <div class="prod-image" style="background: url({{product.options[product.activeOption].imgSrc}});
+      <div class="prod-image" style="background: url({{product.options.imgSrc}});
                 width: 100%;
                 height: 100%;
                 background-size: cover;
@@ -22,20 +22,16 @@
            ui-sref="proddetails({id:product.id})">
       </div>
       <!--name-->
-      <div class="prod-name">{{product.options[product.activeOption].name}}</div>
+      <div class="prod-name">{{product.options.name}}</div>
     </div>
-    <div class="alt-color-container" ng-if="product.options.length > 1">
-      <!--<div class="alt-circle" style="background: {{product.primeColor}}"></div>-->
-      <div ng-repeat="option in product.options track by $index"
-           class="alt-circle"
-           ng-click="$ctrl.switchColor(product, $index)"
-           style="background: {{option.color}}"></div>
-    </div>
+    <!--Alternative Color Switch-->
+    <!--<div class="alt-color-container" ng-if="product.options.length > 1">-->
+      <!--&lt;!&ndash;<div class="alt-circle" style="background: {{product.primeColor}}"></div>&ndash;&gt;-->
+      <!--<div ng-repeat="option in product.options track by $index"-->
+           <!--class="alt-circle"-->
+           <!--ng-click="$ctrl.switchColor(product, $index)"-->
+           <!--style="background: {{option.color}}"></div>-->
+    <!--</div>-->
   </div>
 </div>
 
-<div class="new-data" ng-repeat="dat in $ctrl.prodData">
-  <span>name :{{dat}}</span>
-</div>
-
-<div>Data: {{$ctrl.arr}}</div>

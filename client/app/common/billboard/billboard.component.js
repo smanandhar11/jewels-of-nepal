@@ -3,7 +3,10 @@ import controller from './billboard.controller';
 import './billboard.scss';
 
 let billboardComponent = {
-  bindings: {},
+  bindings: {
+    prodName:'<',
+    prodImg:'<'
+  },
   template,
   controller
 };
