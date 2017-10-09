@@ -3,6 +3,7 @@ class ProddisplayController {
     'ngInject';
     this.products = [
       {
+        activeOption: 0,
         'id': 1,
         'type': 'Necklace',
         'mainColor': 'blue',
@@ -12,7 +13,6 @@ class ProddisplayController {
         'bgPosition': 'bottom',
         'bgColor': '',
         'primeColor': '',
-        activeOption: 0,
         options: [
           {
             'imgSrc': '../../../app/resources/images/product-images/saphire-fall.jpg',
@@ -243,7 +243,6 @@ class ProddisplayController {
 
   switchColor(product, index) {
     product.activeOption = index;
-    console.log(product);
   }
 
   $onInit() {
@@ -255,11 +254,12 @@ class ProddisplayController {
     this.productData = this.$firebaseArray(rootRef);
 
     this.productData.$ref().once('value', (snap) => {
-      this.arr = [];
+      this.productArray = [];
       snap.forEach((data) => {
-        this.arr.push(data.val());
+        this.productArray.push(data.val());
+
       });
-      console.log(this.arr);
+      console.log(this.productArray);
       // angular.forEach(snap.val(), (val) => {
       //   this.prodData = snap.val();
       //   console.log('>>', snap.length);
