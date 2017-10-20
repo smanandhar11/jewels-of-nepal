@@ -6,6 +6,7 @@ import Header from './header/header';
 import Hero from './hero/hero';
 import ProdDisplay from './proddisplay/proddisplay';
 import ProdFilter from './prodfilter/prodfilter';
+import RelatedProducts from './relatedproducts/relatedproducts';
 import Social from './social/social';
 import User from './user/user';
 import Wrapper from './wrapper/wrapper';
@@ -18,6 +19,7 @@ let commonModule = angular.module('app.common', [
   Hero,
   ProdDisplay,
   ProdFilter,
+  RelatedProducts,
   Social,
   User,
   Wrapper,

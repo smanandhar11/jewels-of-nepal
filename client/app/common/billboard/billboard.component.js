@@ -5,7 +5,8 @@ import './billboard.scss';
 let billboardComponent = {
   bindings: {
     prodName:'<',
-    prodImg:'<'
+    prodImg:'<',
+    prodDesp:'<'
   },
   template,
   controller

@@ -1,0 +1,19 @@
+<div class="relatedproducts">
+  <div class="repeater"
+       ng-repeat="relatedProds in $ctrl.filtered">
+    <div class="circle">
+      <!--image-->
+      <div class="prod-image" style="background: url({{relatedProds.options.imgSrc}});
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                outline: none;
+                border-radius: 100px;
+                background-position: {{relatedProds.bgPosition}};"
+           ui-sref="proddetails({id:relatedProds.id})">
+      </div>
+      <!--name-->
+      <div class="prod-name">{{relatedProds.options.name}}</div>
+    </div>
+  </div>
+</div>

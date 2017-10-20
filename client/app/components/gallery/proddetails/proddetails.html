@@ -1,10 +1,17 @@
 <navbar></navbar>
-<main>
+<!--todo:add style to css-->
+<main style="background: #ffffff">
   <div class="rapper lg">
     <billboard prod-name="$ctrl.intProd.options.name"
+               prod-desp="$ctrl.intProd.desp"
                prod-img="$ctrl.intProd.options.imgSrc">
 
     </billboard>
+
+    <relatedproducts prod-color="$ctrl.intProd.mainColor"
+                     prod-type="$ctrl.intProd.type"
+                     prod-id="$ctrl.intProd.id">
+    </relatedproducts>
   </div>
 </main>
 <footer></footer>

@@ -1,22 +1,15 @@
 <div class="billboard">
-  <div class="board-container" style="background:#D9E9E6">
-    <!--Carousel-->
-    <div class="simple-carousel">
-      <div class="detail-img"
-           style="background: url({{$ctrl.prodImg}});
-                    height: 300px;
+  <div class="board-container">
+    <div class="prod-img" style="background: url({{$ctrl.prodImg}});
                     background-size: contain;
                     background-repeat: no-repeat;">
-      </div>
-      <div class="detail-info">
-        <span class="prod-name">{{$ctrl.prodName}}</span>
-        <label class="prod">Also available in:</label>
-        <div class="color-scheme">
-          <span class="color-round">
-
-          </span>
-        </div>
-      </div>
+    </div>
+    <div class="prod-info">
+      <h4>{{$ctrl.prodName}}</h4>
+      <span class="prod-description">{{$ctrl.prodDesp}}</span>
+      <!--todo:add style to css-->
+      <md-button class="md-raised .add-to-cart-btn" style="padding:0 80px">Add to Cart</md-button>
+      <md-button class="md-raised .buy-btn" style="padding:0 111px">Buy</md-button>
     </div>
   </div>
 </div>

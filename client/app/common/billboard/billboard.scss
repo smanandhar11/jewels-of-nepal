@@ -1,45 +1,32 @@
+@import "../../styles/variables";
+
 .billboard {
   .board-container {
-    .simple-carousel {
-      display: flex;
-      .arrows {
-        position: absolute;
-        bottom: 388px;
-        i {
-          font-size: 35px;
-          color: #000000;
-          cursor: pointer;
-        }
-        .fa-chevron-right {
-          position: relative;
-          left: 535px;
-        }
+    display: flex;
+    .prod-img {
+      height: 442px;
+      width: 553px;
+    }
+    .prod-info {
+      margin-top: 75px;
+      h4 {
+        font-size: 25px;
       }
-      .images-container {
-        .inactive {
-          display: none;
-        }
+      .prod-description {
+        display: block;
+        font-size: 12px;
+        width: 250px;
       }
-      .detail-img {
-        flex: 0.7;
-      }
-      .detail-info {
-        display: flex;
-        flex-direction: column;
-        padding-top:20px ;
+      .md-button {
+        display: block;
+        margin: 15px 0;
+        border-bottom: 2px solid transparent;
+        transition: border-color 1.2s ease, color 1.2s ease;
 
-        .prod-name {
-          font-size: 22px;
-        }
-        span,label,div {
-          margin-bottom: 20px;
-        }
-        .color-scheme {
-          .color-round {
-            width: 30px;
-            height: 30px;
-            border-radius: 30px;
-          }
+
+        &:hover {
+          border-color: $primaryColor;
+          color: $primaryColor;
         }
       }
     }
