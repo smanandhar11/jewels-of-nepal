@@ -6,7 +6,8 @@ let billboardComponent = {
   bindings: {
     prodName:'<',
     prodImg:'<',
-    prodDesp:'<'
+    prodDesp:'<',
+    prodPrice:'<'
   },
   template,
   controller

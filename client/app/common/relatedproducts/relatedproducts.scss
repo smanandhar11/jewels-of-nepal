@@ -1,9 +1,9 @@
 .relatedproducts {
   display: flex;
+  flex-wrap: wrap;
 
   .repeater {
     display: flex;
-
 
     .circle {
       height: 180px;

@@ -11,6 +11,13 @@
       margin-top: 75px;
       h4 {
         font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .prod-price {
+        font-size: 20px;
+        display: block;
+        margin: 10px 0;
+        color: $primaryColor;
       }
       .prod-description {
         display: block;
